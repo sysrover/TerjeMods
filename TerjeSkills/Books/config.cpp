@@ -5,7 +5,11 @@ class CfgPatches
 		units[]={};
 		weapons[]={};
 		requiredVersion=0.1;
-		requiredAddons[]={"TerjeCore", "TerjeSkills"};
+		requiredAddons[]=
+		{
+			"TerjeCore",
+			"TerjeSkills"
+		};
 	};
 };
 
@@ -17,7 +21,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_ATHLETIC1";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_athletic1_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_athletic1_co.paa"};
 		
 		terjeSkillId="athlc";
 		terjeSkillMinLevel=0;
@@ -29,7 +33,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_ATHLETIC2";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_athletic2_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_athletic2_co.paa"};
 		
 		terjeSkillId="athlc";
 		terjeSkillMinLevel=10;
@@ -41,7 +45,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_ATHLETIC3";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_athletic3_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_athletic3_co.paa"};
 		
 		terjeSkillId="athlc";
 		terjeSkillMinLevel=20;
@@ -53,7 +57,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_ATHLETIC4";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_athletic4_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_athletic4_co.paa"};
 		
 		terjeSkillId="athlc";
 		terjeSkillMinLevel=30;
@@ -65,7 +69,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_ATHLETIC5";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_athletic5_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_athletic5_co.paa"};
 		
 		terjeSkillId="athlc";
 		terjeSkillMinLevel=40;
@@ -77,7 +81,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_FISHING1";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_fishing1_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_fishing1_co.paa"};
 		
 		terjeSkillId="fish";
 		terjeSkillMinLevel=0;
@@ -89,7 +93,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_FISHING2";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_fishing2_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_fishing2_co.paa"};
 		
 		terjeSkillId="fish";
 		terjeSkillMinLevel=10;
@@ -101,7 +105,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_FISHING3";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_fishing3_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_fishing3_co.paa"};
 		
 		terjeSkillId="fish";
 		terjeSkillMinLevel=20;
@@ -113,7 +117,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_FISHING4";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_fishing4_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_fishing4_co.paa"};
 		
 		terjeSkillId="fish";
 		terjeSkillMinLevel=30;
@@ -125,7 +129,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_FISHING5";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_fishing5_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_fishing5_co.paa"};
 		
 		terjeSkillId="fish";
 		terjeSkillMinLevel=40;
@@ -137,7 +141,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_HUNTING1";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_hunting1_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_hunting1_co.paa"};
 		
 		terjeSkillId="hunt";
 		terjeSkillMinLevel=0;
@@ -149,7 +153,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_HUNTING2";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_hunting2_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_hunting2_co.paa"};
 		
 		terjeSkillId="hunt";
 		terjeSkillMinLevel=10;
@@ -161,7 +165,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_HUNTING3";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_hunting3_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_hunting3_co.paa"};
 		
 		terjeSkillId="hunt";
 		terjeSkillMinLevel=20;
@@ -173,7 +177,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_HUNTING4";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_hunting4_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_hunting4_co.paa"};
 		
 		terjeSkillId="hunt";
 		terjeSkillMinLevel=30;
@@ -185,7 +189,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_HUNTING5";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_hunting5_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_hunting5_co.paa"};
 		
 		terjeSkillId="hunt";
 		terjeSkillMinLevel=40;
@@ -197,7 +201,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_METABOLISM1";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_metabolism1_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_metabolism1_co.paa"};
 		
 		terjeSkillId="mtblsm";
 		terjeSkillMinLevel=0;
@@ -209,7 +213,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_METABOLISM2";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_metabolism2_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_metabolism2_co.paa"};
 		
 		terjeSkillId="mtblsm";
 		terjeSkillMinLevel=10;
@@ -221,7 +225,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_METABOLISM3";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_metabolism3_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_metabolism3_co.paa"};
 		
 		terjeSkillId="mtblsm";
 		terjeSkillMinLevel=20;
@@ -233,7 +237,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_METABOLISM4";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_metabolism4_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_metabolism4_co.paa"};
 		
 		terjeSkillId="mtblsm";
 		terjeSkillMinLevel=30;
@@ -245,7 +249,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_METABOLISM5";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_metabolism5_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_metabolism5_co.paa"};
 		
 		terjeSkillId="mtblsm";
 		terjeSkillMinLevel=40;
@@ -257,7 +261,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STEALTH1";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_stealth1_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_stealth1_co.paa"};
 		
 		terjeSkillId="stlth";
 		terjeSkillMinLevel=0;
@@ -269,7 +273,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STEALTH2";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_stealth2_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_stealth2_co.paa"};
 		
 		terjeSkillId="stlth";
 		terjeSkillMinLevel=10;
@@ -281,7 +285,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STEALTH3";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_stealth3_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_stealth3_co.paa"};
 		
 		terjeSkillId="stlth";
 		terjeSkillMinLevel=20;
@@ -293,7 +297,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STEALTH4";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_stealth4_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_stealth4_co.paa"};
 		
 		terjeSkillId="stlth";
 		terjeSkillMinLevel=30;
@@ -305,7 +309,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STEALTH5";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_stealth5_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_stealth5_co.paa"};
 		
 		terjeSkillId="stlth";
 		terjeSkillMinLevel=40;
@@ -317,7 +321,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STRENGTH1";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_strength1_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_strength1_co.paa"};
 		
 		terjeSkillId="strng";
 		terjeSkillMinLevel=0;
@@ -329,7 +333,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STRENGTH2";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_strength2_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_strength2_co.paa"};
 		
 		terjeSkillId="strng";
 		terjeSkillMinLevel=10;
@@ -341,7 +345,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STRENGTH3";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_strength3_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_strength3_co.paa"};
 		
 		terjeSkillId="strng";
 		terjeSkillMinLevel=20;
@@ -353,7 +357,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STRENGTH4";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_strength4_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_strength4_co.paa"};
 		
 		terjeSkillId="strng";
 		terjeSkillMinLevel=30;
@@ -365,7 +369,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STRENGTH5";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_strength5_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_strength5_co.paa"};
 		
 		terjeSkillId="strng";
 		terjeSkillMinLevel=40;
@@ -377,7 +381,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_SURVIVAL1";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_survival1_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_survival1_co.paa"};
 		
 		terjeSkillId="surv";
 		terjeSkillMinLevel=0;
@@ -389,7 +393,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_SURVIVAL2";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_survival2_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_survival2_co.paa"};
 		
 		terjeSkillId="surv";
 		terjeSkillMinLevel=10;
@@ -401,7 +405,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_SURVIVAL3";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_survival3_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_survival3_co.paa"};
 		
 		terjeSkillId="surv";
 		terjeSkillMinLevel=20;
@@ -413,7 +417,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_SURVIVAL4";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_survival4_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_survival4_co.paa"};
 		
 		terjeSkillId="surv";
 		terjeSkillMinLevel=30;
@@ -425,7 +429,7 @@ class CfgVehicles
 		scope=2;
 		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_SURVIVAL5";
-		hiddenSelectionsTextures[]={ "TerjeSkills\Books\data\book_survival5_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_survival5_co.paa"};
 		
 		terjeSkillId="surv";
 		terjeSkillMinLevel=40;

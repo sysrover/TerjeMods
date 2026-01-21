@@ -7,7 +7,8 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
-			"TerjeSkills", "DZ_Gear_Tools"
+			"TerjeSkills",
+			"DZ_Gear_Tools"
 		};
 	};
 };

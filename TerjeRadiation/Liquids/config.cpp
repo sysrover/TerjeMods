@@ -7,7 +7,8 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
-			"TerjeRadiation", "TerjeCore"
+			"TerjeRadiation",
+			"TerjeCore"
 		};
 	};
 };

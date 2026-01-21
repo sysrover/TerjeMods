@@ -7,7 +7,9 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
-			"TerjeRadiation", "DZ_Gear_Camping", "DZ_Data"
+			"TerjeRadiation",
+			"DZ_Gear_Camping",
+			"DZ_Data"
 		};
 	};
 };
@@ -16,23 +18,23 @@ class CfgSlots
 	class Slot_CanisterGasoline
 	{
 		name="CanisterGasoline";
-		displayName = "#STR_TERJERAD_CANISTRE";
-		selection = "CanisterGasoline";
-		ghostIcon = "set:TerjeRadiation_icon image:tr_canistre";
+		displayName="#STR_TERJERAD_CANISTRE";
+		selection="CanisterGasoline";
+		ghostIcon="set:TerjeRadiation_icon image:tr_canistre";
 	};
 	class Slot_TerjeShower
 	{
-		name = "TerjeShower";
-		displayName = "#STR_TERJERAD_SHOWER";
-		selection = "Shower";
-		ghostIcon = "set:TerjeRadiation_icon image:tr_shower";
+		name="TerjeShower";
+		displayName="#STR_TERJERAD_SHOWER";
+		selection="Shower";
+		ghostIcon="set:TerjeRadiation_icon image:tr_shower";
 	};
 	class Slot_TerjePump 
 	{
-		name = "TerjePump";
-		displayName = "#STR_TERJERAD_PUMP";
-		selection = "Pump";
-		ghostIcon = "set:TerjeRadiation_icon image:tr_pump";
+		name="TerjePump";
+		displayName="#STR_TERJERAD_PUMP";
+		selection="Pump";
+		ghostIcon="set:TerjeRadiation_icon image:tr_pump";
 	};
 };
 class CfgNonAIVehicles
@@ -40,12 +42,12 @@ class CfgNonAIVehicles
 	class ProxyAttachment;
 	class ProxyJerryCan: ProxyAttachment
 	{
-		model = "\dz\vehicles\parts\jerrycan.p3d";
+		model="\dz\vehicles\parts\jerrycan.p3d";
 		inventoryslot[] += {"CanisterGasoline"};
 	};
 	class ProxyPump: ProxyAttachment
 	{
-		model = "\TerjeRadiation\Tent\Pump.p3d";
+		model="\TerjeRadiation\Tent\Pump.p3d";
 		inventoryslot[] += {"TerjePump"};
 	};
 };
@@ -61,44 +63,57 @@ class CfgVehicles
 
 	class TerjeShower : Inventory_Base 
 	{
-		scope = 2;
-		displayName = "#STR_TERJERAD_SHOWER";
-		descriptionShort = "#STR_TERJERAD_SHOWER_DESC";
-		model = "TerjeRadiation\Tent\Hose.p3d";
-		weight = 1000;
-		absorbency = 0;
-		itemSize[] = {3, 3};
-		rotationFlags = 17;
-		inventorySlot[] = {"TerjeShower"};
-		repairableWithKits[] = {6};
-		repairCosts[] = {25.0};
-		hiddenSelections[] = {"zbytek"};
-		hiddenSelectionsTextures[] = {"TerjeRadiation\Tent\data\hose_co.paa"};
+		scope=2;
+		displayName="#STR_TERJERAD_SHOWER";
+		descriptionShort="#STR_TERJERAD_SHOWER_DESC";
+		model="TerjeRadiation\Tent\Hose.p3d";
+		weight=1000;
+		absorbency=0;
+		itemSize[]={3, 3};
+		rotationFlags=17;
+		inventorySlot[]={"TerjeShower"};
+		repairableWithKits[]={6};
+		repairCosts[]={25.0};
+		hiddenSelections[]={"zbytek"};
+		hiddenSelectionsTextures[]={"TerjeRadiation\Tent\data\hose_co.paa"};
 
-		class DamageSystem {
-			class GlobalHealth {
-				class Health {
-					hitpoints = 100;
-					healthLevels[] = {{1.0, {"TerjeRadiation\Tent\data\hose_mat.rvmat"}}, {0.7, {"TerjeRadiation\Tent\data\hose_mat.rvmat"}}, {0.5, {"TerjeRadiation\Tent\data\hose_mat.rvmat"}}, {0.3, {"TerjeRadiation\Tent\data\hose_mat.rvmat"}}, {0.0, {"TerjeRadiation\Tent\data\hose_mat.rvmat"}}};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						{1.0,{"TerjeRadiation\Tent\data\hose_mat.rvmat"}},
+						{0.7,{"TerjeRadiation\Tent\data\hose_mat.rvmat"}},
+						{0.5,{"TerjeRadiation\Tent\data\hose_mat.rvmat"}},
+						{0.3,{"TerjeRadiation\Tent\data\hose_mat.rvmat"}},
+						{0.0,{"TerjeRadiation\Tent\data\hose_mat.rvmat"}}
+					};
 				};
 			};
 		};
 		
-		class AnimEvents {
-			class SoundWeapon {
-				class Stitch {
-					soundSet = "StitchUpSelf_SoundSet";
-					id = 201;
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class Stitch
+				{
+					soundSet="StitchUpSelf_SoundSet";
+					id=201;
 				};
-				
-				class pickup {
-					soundSet = "sewingkit_pickup_SoundSet";
-					id = 797;
+				class pickup
+				{
+					soundSet="sewingkit_pickup_SoundSet";
+					id=797;
 				};
-				
-				class drop {
-					soundset = "sewingkit_drop_SoundSet";
-					id = 898;
+				class drop
+				{
+					soundset="sewingkit_drop_SoundSet";
+					id=898;
 				};
 			};
 		};
@@ -106,44 +121,57 @@ class CfgVehicles
 
 	class TerjePump : Inventory_Base 
 	{
-		scope = 2;
-		displayName = "#STR_TERJERAD_PUMP";
-		descriptionShort = "#STR_TERJERAD_PUMP_DESC";
-		model = "TerjeRadiation\Tent\Pump.p3d";
-		weight = 1000;
-		absorbency = 0;
-		itemSize[] = {4, 3};
-		rotationFlags = 0;
-		repairableWithKits[] = {7};
-		repairCosts[] = {25.0};
-		inventorySlot[] = {"TerjePump"};
-		hiddenSelections[] = {"zbytek"};
-		hiddenSelectionsTextures[] = {"TerjeRadiation\Tent\data\pump_co.paa"};
+		scope=2;
+		displayName="#STR_TERJERAD_PUMP";
+		descriptionShort="#STR_TERJERAD_PUMP_DESC";
+		model="TerjeRadiation\Tent\Pump.p3d";
+		weight=1000;
+		absorbency=0;
+		itemSize[]={4, 3};
+		rotationFlags=0;
+		repairableWithKits[]={7};
+		repairCosts[]={25.0};
+		inventorySlot[]={"TerjePump"};
+		hiddenSelections[]={"zbytek"};
+		hiddenSelectionsTextures[]={"TerjeRadiation\Tent\data\pump_co.paa"};
 
-		class DamageSystem {
-			class GlobalHealth {
-				class Health {
-					hitpoints = 100;
-					healthLevels[] = {{1.0, {"TerjeRadiation\Tent\data\pump_mat.rvmat"}}, {0.7, {"TerjeRadiation\Tent\data\pump_mat.rvmat"}}, {0.5, {"TerjeRadiation\Tent\data\pump_mat.rvmat"}}, {0.3, {"TerjeRadiation\Tent\data\pump_mat.rvmat"}}, {0.0, {"TerjeRadiation\Tent\data\pump_mat.rvmat"}}};
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						{1.0,{"TerjeRadiation\Tent\data\pump_mat.rvmat"}},
+						{0.7,{"TerjeRadiation\Tent\data\pump_mat.rvmat"}},
+						{0.5,{"TerjeRadiation\Tent\data\pump_mat.rvmat"}},
+						{0.3,{"TerjeRadiation\Tent\data\pump_mat.rvmat"}},
+						{0.0,{"TerjeRadiation\Tent\data\pump_mat.rvmat"}}
+					};
 				};
 			};
 		};
 		
-		class AnimEvents {
-			class SoundWeapon {
-				class Stitch {
-					soundSet = "StitchUpSelf_SoundSet";
-					id = 201;
+		class AnimEvents
+		{
+			class SoundWeapon
+			{
+				class Stitch
+				{
+					soundSet="StitchUpSelf_SoundSet";
+					id=201;
 				};
-				
-				class pickup {
-					soundSet = "sewingkit_pickup_SoundSet";
-					id = 797;
+				class pickup
+				{
+					soundSet="sewingkit_pickup_SoundSet";
+					id=797;
 				};
-				
-				class drop {
-					soundset = "sewingkit_drop_SoundSet";
-					id = 898;
+				class drop
+				{
+					soundset="sewingkit_drop_SoundSet";
+					id=898;
 				};
 			};
 		};
@@ -176,7 +204,7 @@ class CfgVehicles
 			"TerjeRadiation\Tent\data\radtentplace_mat.rvmat"
 		};
 		openable=0;
-		absorbency = 0;
+		absorbency=0;
 		carveNavmesh=1;
 		weight=60000;
 		itemSize[]={10,5};
@@ -198,11 +226,11 @@ class CfgVehicles
 		{
 			hasIcon=1;
 			autoSwitchOff=1;
-			autoSwitchOffWhenInCargo = 1;
-			energyUsagePerSecond=0.050000001;
+			autoSwitchOffWhenInCargo=1;
+			energyUsagePerSecond=0.05;
 			plugType=5;
 			attachmentAction=1;
-			updateInterval = 1.0;
+			updateInterval=1.0;
 		};
 		minPlacingDist=10;
 		rotationFlags=2;
@@ -215,46 +243,11 @@ class CfgVehicles
 					hitpoints=1700;
 					healthLevels[]=
 					{
-						
-						{
-							1.0,
-							
-							{
-								""
-							}
-						},
-						
-						{
-							0.69999999,
-							
-							{
-								""
-							}
-						},
-						
-						{
-							0.5,
-							
-							{
-								""
-							}
-						},
-						
-						{
-							0.30000001,
-							
-							{
-								""
-							}
-						},
-						
-						{
-							0.0,
-							
-							{
-								""
-							}
-						}
+						{1.0,{""}},
+						{0.7,{""}},
+						{0.5,{""}},
+						{0.3,{""}},
+						{0.0,{""}}
 					};
 				};
 			};
@@ -264,14 +257,14 @@ class CfgVehicles
 				{
 					class Health
 					{
-						damage=0.050000001;
+						damage=0.05;
 					};
 				};
 				class Melee
 				{
 					class Health
 					{
-						damage=0.30000001;
+						damage=0.3;
 					};
 				};
 				class FragGrenade
@@ -292,51 +285,11 @@ class CfgVehicles
 						transferToGlobalCoef=0.5;
 						healthLevels[]=
 						{
-							
-							{
-								1,
-								
-								{
-									"TerjeRadiation\Tent\data\radtent_mat.rvmat",
-									"DZ\gear\camping\data\tent_pristine_co.paa"
-								}
-							},
-							
-							{
-								0.69999999,
-								
-								{
-									"TerjeRadiation\Tent\data\radtent_mat.rvmat",
-									"DZ\gear\camping\data\tent_worn_co.paa"
-								}
-							},
-							
-							{
-								0.5,
-								
-								{
-									"TerjeRadiation\Tent\data\radtent_mat_damage.rvmat",
-									"DZ\gear\camping\data\tent_damage_co.paa"
-								}
-							},
-							
-							{
-								0.30000001,
-								
-								{
-									"TerjeRadiation\Tent\data\radtent_mat_damage.rvmat",
-									"DZ\gear\camping\data\tent_destruct_co.paa"
-								}
-							},
-							
-							{
-								0,
-								
-								{
-									"TerjeRadiation\Tent\data\radtent_mat_destruct.rvmat",
-									"DZ\gear\camping\data\tent_destruct_co.paa"
-								}
-							}
+							{1.0,{"TerjeRadiation\Tent\data\radtent_mat.rvmat","DZ\gear\camping\data\tent_pristine_co.paa"}},
+							{0.7,{"TerjeRadiation\Tent\data\radtent_mat.rvmat","DZ\gear\camping\data\tent_worn_co.paa"}},
+							{0.5,{"TerjeRadiation\Tent\data\radtent_mat_damage.rvmat","DZ\gear\camping\data\tent_damage_co.paa"}},
+							{0.3,{"TerjeRadiation\Tent\data\radtent_mat_damage.rvmat","DZ\gear\camping\data\tent_destruct_co.paa"}},
+							{0.0,{"TerjeRadiation\Tent\data\radtent_mat_destruct.rvmat","DZ\gear\camping\data\tent_destruct_co.paa"}}
 						};
 					};
 					class ArmorType
@@ -345,14 +298,14 @@ class CfgVehicles
 						{
 							class Health
 							{
-								damage=0.050000001;
+								damage=0.05;
 							};
 						};
 						class Melee
 						{
 							class Health
 							{
-								damage=0.30000001;
+								damage=0.3;
 							};
 						};
 						class FragGrenade
@@ -382,46 +335,11 @@ class CfgVehicles
 						transferToGlobalCoef=0.5;
 						healthLevels[]=
 						{
-							
-							{
-								1.0,
-								
-								{
-									"TerjeRadiation\Tent\data\radtent_mat.rvmat",
-								}
-							},
-							
-							{
-								0.69999999,
-								
-								{
-									"TerjeRadiation\Tent\data\radtent_mat.rvmat",
-								}
-							},
-							
-							{
-								0.5,
-								
-								{
-									"TerjeRadiation\Tent\data\radtent_mat_damage.rvmat",
-								}
-							},
-							
-							{
-								0.30000001,
-								
-								{
-									"TerjeRadiation\Tent\data\radtent_mat_damage.rvmat",
-								}
-							},
-							
-							{
-								0.0,
-								
-								{
-									"TerjeRadiation\Tent\data\radtent_mat_destruct.rvmat",
-								}
-							}
+							{1.0,{"TerjeRadiation\Tent\data\radtent_mat.rvmat"}},
+							{0.7,{"TerjeRadiation\Tent\data\radtent_mat.rvmat"}},
+							{0.5,{"TerjeRadiation\Tent\data\radtent_mat_damage.rvmat"}},
+							{0.3,{"TerjeRadiation\Tent\data\radtent_mat_damage.rvmat"}},
+							{0.0,{"TerjeRadiation\Tent\data\radtent_mat_destruct.rvmat"}}
 						};
 					};
 					class ArmorType
@@ -430,14 +348,14 @@ class CfgVehicles
 						{
 							class Health
 							{
-								damage=0.050000001;
+								damage=0.05;
 							};
 						};
 						class Melee
 						{
 							class Health
 							{
-								damage=0.30000001;
+								damage=0.3;
 							};
 						};
 						class FragGrenade
@@ -483,44 +401,44 @@ class CfgVehicles
 			class Body
 			{
 				source="user";
-				animPeriod=0.0099999998;
+				animPeriod=0.01;
 				initPhase=1;
 			};
 			class Shower
 			{
 				source="user";
-				animPeriod=0.0099999998;
+				animPeriod=0.01;
 				initPhase=1;
 			};
 			class Inventory
 			{
 				source="user";
-				animPeriod=0.0099999998;
+				animPeriod=0.01;
 				initPhase=1;
 			};
 			class Canistre_plug
 			{
 				source="user";
 				initPhase=1;
-				animPeriod=0.0099999998;
+				animPeriod=0.01;
 			};
 			class Cord_folded
 			{
 				source="user";
 				initPhase=1;
-				animPeriod=0.0099999998;
+				animPeriod=0.01;
 			};
 			class Cord_plugged
 			{
 				source="user";
 				initPhase=1;
-				animPeriod=0.0099999998;
+				animPeriod=0.01;
 			};
 			class Pack
 			{
 				source="user";
 				initPhase=1;
-				animPeriod=0.0099999998;
+				animPeriod=0.01;
 			};
 		};
 		class AnimEvents
@@ -576,7 +494,7 @@ class CfgVehicles
 			class Placing
 			{
 				source="user";
-				animPeriod=0.0099999998;
+				animPeriod=0.01;
 				initPhase=1;
 			};
 		};
@@ -595,35 +513,35 @@ class CfgSoundShaders
 {
 	class TerjeRadTentShowerSoundShader
 	{
-		samples[] = {{"\TerjeRadiation\Tent\sound\shower",0.9}};
-		volume = 1;
-		range = 50;
+		samples[]={{"\TerjeRadiation\Tent\sound\shower",0.9}};
+		volume=1;
+		range=50;
 	};
 	class TerjeRadTentPumpSoundShader
 	{
-		samples[] = {{"\TerjeRadiation\Tent\sound\pump",0.9}};
-		volume = 2;
-		range = 25;
+		samples[]={{"\TerjeRadiation\Tent\sound\pump",0.9}};
+		volume=2;
+		range=25;
 	};
 };
 class CfgSoundSets
 {
 	class TerjeRadTentShower_SoundSet
 	{
-		sound3DProcessingType = "infected3DProcessingType";
-		volumeCurve = "infectedAttenuationCurve";
-		spatial = 1;
-		doppler = 0;
-		loop = 0;
-		soundShaders[] = {"TerjeRadTentShowerSoundShader"};
+		sound3DProcessingType="infected3DProcessingType";
+		volumeCurve="infectedAttenuationCurve";
+		spatial=1;
+		doppler=0;
+		loop=0;
+		soundShaders[]={"TerjeRadTentShowerSoundShader"};
 	};
 	class TerjeRadTentPump_SoundSet
 	{
-		sound3DProcessingType = "infected3DProcessingType";
-		volumeCurve = "infectedAttenuationCurve";
-		spatial = 1;
-		doppler = 0;
-		loop = 0;
-		soundShaders[] = {"TerjeRadTentPumpSoundShader"};
+		sound3DProcessingType="infected3DProcessingType";
+		volumeCurve="infectedAttenuationCurve";
+		spatial=1;
+		doppler=0;
+		loop=0;
+		soundShaders[]={"TerjeRadTentPumpSoundShader"};
 	};
 };

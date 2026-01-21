@@ -49,45 +49,11 @@ class CfgVehicles
 					hitpoints=50;
 					healthLevels[]=
 					{
-						
-						{
-							1,
-							
-							{
-								"DZ\gear\medical\data\epipen.rvmat"
-							}
-						},
-						
-						{
-							0.75,
-							
-							{
-								"DZ\gear\medical\data\epipen.rvmat"
-							}
-						},
-						
-						{
-							0.5,
-							
-							{
-								"DZ\gear\medical\data\epipen_damage.rvmat"
-							}
-						},
-						
-						{
-							0.25,
-							
-							{
-								"DZ\gear\medical\data\epipen_damage.rvmat"
-							}
-						},
-						
-						{
-							0,
-							{
-								"DZ\gear\medical\data\epipen_destruct.rvmat"
-							}
-						}
+						{1.0,{"DZ\gear\medical\data\epipen.rvmat"}},
+						{0.7,{"DZ\gear\medical\data\epipen.rvmat"}},
+						{0.5,{"DZ\gear\medical\data\epipen_damage.rvmat"}},
+						{0.3,{"DZ\gear\medical\data\epipen_damage.rvmat"}},
+						{0.0,{"DZ\gear\medical\data\epipen_destruct.rvmat"}}
 					};
 				};
 			};

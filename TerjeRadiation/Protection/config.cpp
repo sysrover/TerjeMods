@@ -7,9 +7,16 @@ class CfgPatches
 		requiredVersion=0.1;
 		requiredAddons[]=
 		{
-			"TerjeRadiation", "DZ_Data", "DZ_Gear_Crafting", "DZ_Gear_Consumables",
-			"DZ_Characters_Tops", "DZ_Characters_Shoes", "DZ_Characters_Pants",
-			"DZ_Characters_Masks", "DZ_Characters_Headgear", "DZ_Characters_Gloves"
+			"TerjeRadiation",
+			"DZ_Data",
+			"DZ_Gear_Crafting",
+			"DZ_Gear_Consumables",
+			"DZ_Characters_Tops",
+			"DZ_Characters_Shoes",
+			"DZ_Characters_Pants",
+			"DZ_Characters_Masks",
+			"DZ_Characters_Headgear",
+			"DZ_Characters_Gloves"
 		};
 	};
 };
