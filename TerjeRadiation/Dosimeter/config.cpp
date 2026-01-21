@@ -11,6 +11,7 @@ class CfgPatches
 		};
 	};
 };
+
 class CfgVehicles
 {
 	class Inventory_Base;

@@ -15,7 +15,6 @@ class CfgPatches
 class CfgVehicles
 {
 	class Inventory_Base;
-	
 	class TerjeSalveBase : Inventory_Base
 	{
 		descriptionShort="#STR_TERJEMED_SALVE_DESC";

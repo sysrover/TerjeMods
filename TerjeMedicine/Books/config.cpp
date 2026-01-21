@@ -138,8 +138,6 @@ class CfgVehicles
 	};
 
 	class HouseNoDestruct;
-
-
 	class StaticObj_TerjeBookImmunity1: HouseNoDestruct
 	{
 		scope=1;

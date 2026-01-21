@@ -19,7 +19,9 @@ class CfgVehicles
 	class TerjeEnergyDrink : SodaCan_ColorBase
 	{ 
 		scope=0;
-		class AnimEvents{class SoundWeapon
+		class AnimEvents
+		{
+			class SoundWeapon
 			{
 				class SodaCan_in_B
 				{

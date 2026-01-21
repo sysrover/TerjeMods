@@ -13,6 +13,7 @@ class CfgPatches
 		};
 	};
 };
+
 class CfgVehicles
 {
 	class Clothing;

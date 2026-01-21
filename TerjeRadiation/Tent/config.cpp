@@ -13,6 +13,7 @@ class CfgPatches
 		};
 	};
 };
+
 class CfgSlots
 {
 	class Slot_CanisterGasoline
@@ -37,6 +38,7 @@ class CfgSlots
 		ghostIcon="set:TerjeRadiation_icon image:tr_pump";
 	};
 };
+
 class CfgNonAIVehicles
 {
 	class ProxyAttachment;
@@ -51,6 +53,7 @@ class CfgNonAIVehicles
 		inventoryslot[] += {"TerjePump"};
 	};
 };
+
 class CfgVehicles
 {
 	class Inventory_Base;
@@ -509,6 +512,7 @@ class CfgVehicles
 		descriptionShort="#STR_TERJERAD_RADTENT_DESC";
 	};
 };
+
 class CfgSoundShaders
 {
 	class TerjeRadTentShowerSoundShader
@@ -524,6 +528,7 @@ class CfgSoundShaders
 		range=25;
 	};
 };
+
 class CfgSoundSets
 {
 	class TerjeRadTentShower_SoundSet
