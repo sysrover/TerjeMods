@@ -85,6 +85,73 @@ class CfgVehicles
 			};
 		};
 	};
+	class TerjePills_Capsule : TerjePillsBase
+	{
+		model="TerjeMedicine\Pills\capsule\capsule.p3d";
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						{1.0,{"TerjeMedicine\Pills\capsule\data\capsule_mat.rvmat"}},
+						{0.7,{"TerjeMedicine\Pills\capsule\data\capsule_mat.rvmat"}},
+						{0.5,{"TerjeMedicine\Pills\capsule\data\capsule_mat_damage.rvmat"}},
+						{0.3,{"TerjeMedicine\Pills\capsule\data\capsule_mat_damage.rvmat"}},
+						{0.0,{"TerjeMedicine\Pills\capsule\data\capsule_mat_destruct.rvmat"}}
+					};
+				};
+			};
+		};
+	};
+	class TerjePills_Oval : TerjePillsBase
+	{
+		model="TerjeMedicine\Pills\oval\oval.p3d";
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						{1.0,{"TerjeMedicine\Pills\oval\data\oval_mat.rvmat"}},
+						{0.7,{"TerjeMedicine\Pills\oval\data\oval_mat.rvmat"}},
+						{0.5,{"TerjeMedicine\Pills\oval\data\oval_mat_damage.rvmat"}},
+						{0.3,{"TerjeMedicine\Pills\oval\data\oval_mat_damage.rvmat"}},
+						{0.0,{"TerjeMedicine\Pills\oval\data\oval_mat_destruct.rvmat"}}
+					};
+				};
+			};
+		};
+	};
+	class TerjePills_Circle : TerjePillsBase
+	{
+		model="TerjeMedicine\Pills\circle\circle.p3d";
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						{1.0,{"TerjeMedicine\Pills\circle\data\circle_mat.rvmat"}},
+						{0.7,{"TerjeMedicine\Pills\circle\data\circle_mat.rvmat"}},
+						{0.5,{"TerjeMedicine\Pills\circle\data\circle_mat_damage.rvmat"}},
+						{0.3,{"TerjeMedicine\Pills\circle\data\circle_mat_damage.rvmat"}},
+						{0.0,{"TerjeMedicine\Pills\circle\data\circle_mat_destruct.rvmat"}}
+					};
+				};
+			};
+		};
+	};
+	
 
 	class CharcoalTablets: Edible_Base
 	{
