@@ -61,7 +61,7 @@ class CfgVehicles
 		medSkillExpAddToSelf=0;
 		medicalAmpoulsCategory=0;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_co.paa"};
 	};
 	
 	class TerjeAmpouleAmoxivan : TerjeAmpouleBase
@@ -73,7 +73,7 @@ class CfgVehicles
 		medAntibioticsTimeSec=900;
 		overdosedIncrement=0.3;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_pink_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_pink_co.paa"};
 	};
 	
 	class TerjeAmpouleNovacaine : TerjeAmpouleBase
@@ -85,7 +85,7 @@ class CfgVehicles
 		medPainkillerTimeSec=1200;
 		overdosedIncrement=0.4;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_blue_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_blue_co.paa"};
 	};
 	
 	class TerjeAmpouleMetoclopramid : TerjeAmpouleBase
@@ -97,7 +97,7 @@ class CfgVehicles
 		medAntipoisonTimeSec=1200;
 		overdosedIncrement=0.4;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_green_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_green_co.paa"};
 	};
 	
 	class TerjeAmpouleNeirox : TerjeAmpouleBase
@@ -108,7 +108,7 @@ class CfgVehicles
 		medConcussionHealTimeSec=600;
 		overdosedIncrement=0.6;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_purple_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_purple_co.paa"};
 	};
 	
 	class TerjeAmpouleErythropoetin : TerjeAmpouleBase
@@ -120,7 +120,7 @@ class CfgVehicles
 		medBloodRegenTimeSec=600;
 		overdosedIncrement=0.4;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_red_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_red_co.paa"};
 	};
 	
 	class TerjeAmpouleAdrenalin : TerjeAmpouleBase
@@ -132,7 +132,7 @@ class CfgVehicles
 		overdosedIncrement=0.3;
 		medSkillExpAddToSelf=10;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_yellow_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_yellow_co.paa"};
 	};
 	
 	class TerjeAmpoulePentacin : TerjeAmpouleBase
@@ -144,7 +144,7 @@ class CfgVehicles
 		medAntiradTimer=400;
 		overdosedIncrement=0.5;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_ultrayellow_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_ultrayellow_co.paa"};
 	};
 	
 	class TerjeAmpouleMetralindole : TerjeAmpouleBase
@@ -156,7 +156,7 @@ class CfgVehicles
 		medAntidepresantTimer=300;
 		overdosedIncrement=0.1;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_gray_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_gray_co.paa"};
 	};
 	
 	class TerjeAmpouleVaxicam : TerjeAmpouleBase
@@ -167,7 +167,7 @@ class CfgVehicles
 		medInfluenzaVacineTime=14400;
 		overdosedIncrement=0.8;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_vacine_a_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_vacine_a_co.paa"};
 	};
 	
 	class TerjeAmpouleZerivax : TerjeAmpouleBase
@@ -179,7 +179,7 @@ class CfgVehicles
 		overdosedIncrement=1.5;
 		medSkillExpAddToSelf=100;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_vacine_b_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_vacine_b_co.paa"};
 	};
 	
 	class TerjeAmpouleRabivax : TerjeAmpouleBase
@@ -191,7 +191,7 @@ class CfgVehicles
 		overdosedIncrement=1.3;
 		medSkillExpAddToSelf=100;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_vacine_c_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_vacine_c_co.paa"};
 	};
 	
 	class TerjeAmpouleRabinoline : TerjeAmpouleBase
@@ -203,7 +203,7 @@ class CfgVehicles
 		medRabiesAntibioticTimeSec=600;
 		overdosedIncrement=0.8;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_violet_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_violet_co.paa"};
 	};
 	
 	class TerjeAmpouleNeirocetal : TerjeAmpouleBase
@@ -215,7 +215,7 @@ class CfgVehicles
 		medAntibiohazardTimeSec=500;
 		overdosedIncrement=1.25;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_neirocet_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_neirocet_co.paa"};
 	};
 	
 	// ADVANCED AMPOULS
@@ -230,7 +230,7 @@ class CfgVehicles
 		medPainkillerTimeSec=1200;
 		overdosedIncrement=0.5;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_neoblack_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_neoblack_co.paa"};
 	};
 	
 	class TerjeAmpouleFlemoclav : TerjeAmpouleBase
@@ -243,7 +243,7 @@ class CfgVehicles
 		medAntisepsisTimeSec=1200;
 		overdosedIncrement=0.8;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_toxicgrey_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_toxicgrey_co.paa"};
 	};
 	
 	class TerjeAmpouleImipenem : TerjeAmpouleBase
@@ -256,7 +256,7 @@ class CfgVehicles
 		medAntisepsisTimeSec=900;
 		overdosedIncrement=0.7;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_toxicgreen_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_toxicgreen_co.paa"};
 	};
 	
 	class TerjeAmpouleMorphine : TerjeAmpouleBase
@@ -268,7 +268,7 @@ class CfgVehicles
 		medPainkillerTimeSec=850;
 		overdosedIncrement=0.52;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_azulred_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_azulred_co.paa"};
 	};
 	
 	class TerjeAmpouleGexobarbital : TerjeAmpouleBase
@@ -280,7 +280,7 @@ class CfgVehicles
 		medPainkillerTimeSec=900;
 		overdosedIncrement=0.65;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_darkorange_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_darkorange_co.paa"};
 	};
 	
 	class TerjeAmpouleKetamin : TerjeAmpouleBase
@@ -292,7 +292,7 @@ class CfgVehicles
 		medPainkillerTimeSec=600;
 		overdosedIncrement=0.45;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_darkblue_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_darkblue_co.paa"};
 	};
 	
 	class TerjeAmpouleHeptral : TerjeAmpouleBase
@@ -304,7 +304,7 @@ class CfgVehicles
 		medAntipoisonTimeSec=600;
 		overdosedIncrement=0.6;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_darkgreen_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_darkgreen_co.paa"};
 	};
 	
 	class TerjeAmpouleCarboxyme : TerjeAmpouleBase
@@ -316,7 +316,7 @@ class CfgVehicles
 		medAntiradTimer=600;
 		overdosedIncrement=0.6;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_dirtyblue_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_dirtyblue_co.paa"};
 	};
 	
 	class TerjeAmpouleActaparoxetine : TerjeAmpouleBase
@@ -328,7 +328,7 @@ class CfgVehicles
 		medAntidepresantTimer=400;
 		overdosedIncrement=0.4;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_dirtygreen_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_dirtygreen_co.paa"};
 	};
 	
 	class TerjeAmpouleAmitriptyline : TerjeAmpouleBase
@@ -340,7 +340,7 @@ class CfgVehicles
 		medAntidepresantTimer=600;
 		overdosedIncrement=0.5;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_dirtyred_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_dirtyred_co.paa"};
 	};
 	
 	class TerjeAmpouleRifampicyne : TerjeAmpouleBase
@@ -352,7 +352,7 @@ class CfgVehicles
 		medRabiesAntibioticTimeSec=300;
 		overdosedIncrement=1.35;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_lightpink_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_lightpink_co.paa"};
 	};
 	
 	class TerjeAmpouleZivirol : TerjeAmpouleBase
@@ -367,7 +367,7 @@ class CfgVehicles
 		terjeAddShock=-100;
 		medSkillExpAddToSelf=200;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_zivirol_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_zivirol_co.paa"};
 	};
 	
 	class TerjeAmpoulePotassiumCyanide : TerjeAmpouleBase
@@ -379,7 +379,7 @@ class CfgVehicles
 		terjeAddWater=-5000;
 		terjeAddEnergy=-5000;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_cyanide_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_cyanide_co.paa"};
 	};
 	
 	class TerjeAmpouleArsenic : TerjeAmpouleBase
@@ -390,7 +390,7 @@ class CfgVehicles
 		overdosedIncrement=5;
 		terjeAddHealth=-50;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_arsenic_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_arsenic_co.paa"};
 	};
 	
 	class TerjeAmpouleBeladonna : TerjeAmpouleBase
@@ -402,7 +402,7 @@ class CfgVehicles
 		medPainSet=5;
 		medContussionLight=1;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_beladonna_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_beladonna_co.paa"};
 	};
 	
 	class TerjeAmpouleStrychnine : TerjeAmpouleBase
@@ -415,7 +415,7 @@ class CfgVehicles
 		terjeAddBlood=-1000;
 		medContussionHeavy=1;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_strychnine_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_strychnine_co.paa"};
 	};
 	
 	class TerjeAmpouleKonyin : TerjeAmpouleBase
@@ -427,7 +427,7 @@ class CfgVehicles
 		medSleepDamageValue=100;
 		medSleepDamageTime=300;
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_konyin_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_konyin_co.paa"};
 	};
 
 	class HouseNoDestruct;
@@ -437,7 +437,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleAmoxivan : HouseNoDestruct
@@ -445,7 +445,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_pink_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_pink_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleNovacaine : HouseNoDestruct
@@ -453,7 +453,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_blue_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_blue_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleMetoclopramid : HouseNoDestruct
@@ -461,7 +461,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_green_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_green_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleNeirox : HouseNoDestruct
@@ -469,7 +469,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_purple_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_purple_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleErythropoetin : HouseNoDestruct
@@ -477,7 +477,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_red_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_red_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleAdrenalin : HouseNoDestruct
@@ -485,7 +485,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_yellow_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_yellow_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpoulePentacin : HouseNoDestruct
@@ -493,7 +493,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_ultrayellow_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_ultrayellow_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleMetralindole : HouseNoDestruct
@@ -501,7 +501,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_gray_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_gray_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleVaxicam : HouseNoDestruct
@@ -509,7 +509,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_vacine_a_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_vacine_a_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleZerivax : HouseNoDestruct
@@ -517,7 +517,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_vacine_b_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_vacine_b_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleRabivax : HouseNoDestruct
@@ -525,7 +525,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_vacine_c_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_vacine_c_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleRabinoline : HouseNoDestruct
@@ -533,7 +533,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_violet_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_violet_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleNeirocetal : HouseNoDestruct
@@ -541,7 +541,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_neirocet_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_neirocet_co.paa"};
 	};
 
 	class StaticObj_TerjeAmpouleKetarol : HouseNoDestruct
@@ -549,7 +549,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_neoblack_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_neoblack_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleFlemoclav : HouseNoDestruct
@@ -557,7 +557,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_toxicgrey_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_toxicgrey_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleImipenem : HouseNoDestruct
@@ -565,7 +565,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_toxicgreen_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_toxicgreen_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleMorphine : HouseNoDestruct
@@ -573,7 +573,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_azulred_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_azulred_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleGexobarbital : HouseNoDestruct
@@ -581,7 +581,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_darkorange_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_darkorange_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleKetamin : HouseNoDestruct
@@ -589,7 +589,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_darkblue_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_darkblue_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleHeptral : HouseNoDestruct
@@ -597,7 +597,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_darkgreen_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_darkgreen_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleCarboxyme : HouseNoDestruct
@@ -605,7 +605,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_dirtyblue_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_dirtyblue_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleActaparoxetine : HouseNoDestruct
@@ -613,7 +613,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_dirtygreen_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_dirtygreen_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleAmitriptyline : HouseNoDestruct
@@ -621,7 +621,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_dirtyred_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_dirtyred_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleRifampicyne : HouseNoDestruct
@@ -629,7 +629,7 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_lightpink_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_lightpink_co.paa"};
 	};
 	
 	class StaticObj_TerjeAmpouleZivirol : HouseNoDestruct
@@ -637,6 +637,6 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\medical\injectionvial.p3d";
 		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\ampoule_zivirol_co.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Ampouls\data\ampoule_zivirol_co.paa"};
 	};
 };
