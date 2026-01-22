@@ -54,6 +54,7 @@ class CfgVehicles
 	class ItemBook;
 	class TerjeBookBase: ItemBook 
 	{
+		rotationFlags=1;
 		class DamageSystem
 		{
 			class GlobalHealth

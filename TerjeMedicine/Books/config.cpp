@@ -19,7 +19,6 @@ class CfgVehicles
 	class TerjeBookImmunity1: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_IMMUNITY1";
 		hiddenSelectionsTextures[]={"TerjeMedicine\Books\data\book_immunity1_co.paa"};
 		
@@ -31,7 +30,6 @@ class CfgVehicles
 	class TerjeBookImmunity2: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_IMMUNITY2";
 		hiddenSelectionsTextures[]={"TerjeMedicine\Books\data\book_immunity2_co.paa"};
 		
@@ -43,7 +41,6 @@ class CfgVehicles
 	class TerjeBookImmunity3: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_IMMUNITY3";
 		hiddenSelectionsTextures[]={"TerjeMedicine\Books\data\book_immunity3_co.paa"};
 		
@@ -55,7 +52,6 @@ class CfgVehicles
 	class TerjeBookImmunity4: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_IMMUNITY4";
 		hiddenSelectionsTextures[]={"TerjeMedicine\Books\data\book_immunity4_co.paa"};
 		
@@ -67,7 +63,6 @@ class CfgVehicles
 	class TerjeBookImmunity5: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_IMMUNITY5";
 		hiddenSelectionsTextures[]={"TerjeMedicine\Books\data\book_immunity5_co.paa"};
 		
@@ -79,7 +74,6 @@ class CfgVehicles
 	class TerjeBookMedicine1: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_MEDICINE1";
 		hiddenSelectionsTextures[]={"TerjeMedicine\Books\data\book_medicine1_co.paa"};
 		
@@ -91,7 +85,6 @@ class CfgVehicles
 	class TerjeBookMedicine2: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_MEDICINE2";
 		hiddenSelectionsTextures[]={"TerjeMedicine\Books\data\book_medicine2_co.paa"};
 		
@@ -103,7 +96,6 @@ class CfgVehicles
 	class TerjeBookMedicine3: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_MEDICINE3";
 		hiddenSelectionsTextures[]={"TerjeMedicine\Books\data\book_medicine3_co.paa"};
 		
@@ -115,7 +107,6 @@ class CfgVehicles
 	class TerjeBookMedicine4: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_MEDICINE4";
 		hiddenSelectionsTextures[]={"TerjeMedicine\Books\data\book_medicine4_co.paa"};
 		
@@ -127,7 +118,6 @@ class CfgVehicles
 	class TerjeBookMedicine5: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_MEDICINE5";
 		hiddenSelectionsTextures[]={"TerjeMedicine\Books\data\book_medicine5_co.paa"};
 		
