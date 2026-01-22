@@ -19,6 +19,8 @@ class CfgVehicles
 	class TerjeInjectorBase : Inventory_Base
 	{
 		descriptionShort="#STR_TERJEMED_INJECTOR_DESC";
+		model="dz\gear\medical\morphine.p3d";
+		hiddenSelections[]={"zbytek"};
 		rotationFlags=17;
 		itemSize[]={1,2};
 		weight=60;
@@ -99,64 +101,54 @@ class CfgVehicles
 	{
 		scope=2;
 		displayName="#STR_TERJEMED_ZIVIROL";
-		model="dz\gear\medical\morphine.p3d";
 		medZAntidotTimeSec=1200;
 		overdosedIncrement=2.5;
 		terjeAddHealth=-20;
 		terjeAddBlood=-10;
 		terjeAddShock=-100;
 		medSkillExpAddToSelf=250;
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_purple_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_purple_co.paa"};
 	};
 	
 	class TerjeInjectorAmoxiclav : TerjeInjectorBase
 	{
 		scope=2;
 		displayName="#STR_TERJEMED_AMOXICLAV";
-		model="dz\gear\medical\morphine.p3d";
 		medAntibioticLevel=3;
 		medAntibioticsTimeSec=1800;
 		medAntisepsisTimeSec=300;
 		overdosedIncrement=0.6;
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_blue_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_blue_co.paa"};
 	};
 	
 	class TerjeInjectorNeirox : TerjeInjectorBase
 	{
 		scope=2;
 		displayName="#STR_TERJEMED_NEIROX";
-		model="dz\gear\medical\morphine.p3d";
 		medConcussionHealTimeSec=500;
 		overdosedIncrement=0.3;
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_agua_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_agua_co.paa"};
 	};
 	
 	class TerjeInjectorErythropoietin : TerjeInjectorBase
 	{
 		scope=2;
 		displayName="#STR_TERJEMED_ERYTHROPOIETIN";
-		model="dz\gear\medical\morphine.p3d";
 		medBloodRegenValue=1;
 		medBloodRegenTimeSec=900;
 		overdosedIncrement=0.4;
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_darkred_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_darkred_co.paa"};
 	};
 	
 	class TerjeInjectorNovichek : TerjeInjectorBase
 	{
 		scope=2;
 		displayName="#STR_TERJEMED_NOVICHEK";
-		model="dz\gear\medical\morphine.p3d";
 		overdosedIncrement=5;
 		biohazardIncrement=5;
 		terjeAddShock=-100;
 		medSkillExpAddToSelf=10;
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_black_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_black_co.paa"};
 	};
 	
 	// Advanced
@@ -164,105 +156,94 @@ class CfgVehicles
 	{
 		scope=2;
 		displayName="#STR_TERJEMED_PROMIDOL";
-		model="dz\gear\medical\morphine.p3d";
 		medPainkillerLevel=3;
 		medPainkillerTimeSec=600;
 		overdosedIncrement=0.45;
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_viogreen_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_viogreen_co.paa"};
 	};
 	
 	class TerjeInjectorTopoizomeraza: TerjeInjectorBase
 	{
 		scope=2;
 		displayName="#STR_TERJEMED_TOPOIZOMERAZA";
-		model="dz\gear\medical\morphine.p3d";
 		medAntibioticLevel=3;
 		medAntibioticsTimeSec=900;
 		medAntisepsisTimeSec=600;
 		overdosedIncrement=0.65;
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_pinkred_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_pinkred_co.paa"};
 	};
 	
 	class TerjeInjectorErytromixelin: TerjeInjectorBase
 	{
 		scope=2;
 		displayName="#STR_TERJEMED_ERYTROMIXELIN";
-		model="dz\gear\medical\morphine.p3d";
 		medBloodHemostaticValue=3;
 		medBloodHemostaticTimeSec=300;
 		medBloodRegenValue=2;
 		medBloodRegenTimeSec=150;
 		overdosedIncrement=0.32;
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_orangebrown_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_orangebrown_co.paa"};
 	};
 	
 	class TerjeInjectorStomaproxidal: TerjeInjectorBase
 	{
 		scope=2;
 		displayName="#STR_TERJEMED_STOMAPROXIDAL";
-		model="dz\gear\medical\morphine.p3d";
 		medAntipoisonLevel=3;
 		medAntipoisonTimeSec=900;
 		overdosedIncrement=0.68;
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_dirtyviolete_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_dirtyviolete_co.paa"};
 	};
 	
 	class TerjeInjectorRabinucoline: TerjeInjectorBase
 	{
 		scope=2;
 		displayName="#STR_TERJEMED_RABINUCOLINE";
-		model="dz\gear\medical\morphine.p3d";
 		medRabiesAntibioticLevel=3;
 		medRabiesAntibioticTimeSec=900;
 		overdosedIncrement=1.46;
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_celugreen_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_celugreen_co.paa"};
 	};
 	
 	class TerjeInjectorAmfitalicyne : TerjeInjectorBase
 	{
 		scope=2;
 		displayName="#STR_TERJEMED_AMFITALICYNE";
-		model="dz\gear\medical\morphine.p3d";
 		medAntidepresantLevel=3;
 		medAntidepresantTimer=520;
 		overdosedIncrement=0.6;
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_bluered_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_bluered_co.paa"};
 	};
 	
 	class TerjeInjectorReanimatal : TerjeInjectorBase
 	{
 		scope=2;
 		displayName="#STR_TERJEMED_REANIMATAL";
-		model="dz\gear\medical\morphine.p3d";
 		medPainkillerLevel=3;
 		medPainkillerTimeSec=240;
 		medHealthgainTimeSec=180;
 		terjeAddShock=-75;
 		overdosedIncrement=1.5;
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_infistar_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_infistar_co.paa"};
 	};
 	
 	class TerjeInjectorPropital : TerjeInjectorBase
 	{
 		scope=2;
 		displayName="#STR_TERJEMED_PROPITAL";
-		model="dz\gear\medical\morphine.p3d";
 		medPainkillerLevel=2;
 		medPainkillerTimeSec=180;
 		medHealthgainTimeSec=45;
 		overdosedIncrement=0.75;
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_propital_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_propital_co.paa"};
 	};
 
 	class HouseNoDestruct;
+	class StaticObj_TerjeInjector: HouseNoDestruct
+	{
+		model="dz\gear\medical\morphine.p3d";
+		hiddenSelections[]={"zbytek"};
+	};
 
 	class StaticObj_TerjeEpinephrine: HouseNoDestruct
 	{
@@ -280,117 +261,85 @@ class CfgVehicles
 	{
 		scope=1;
 		model="dz\gear\medical\Epinephrine.p3d";
-		hiddenSelections[]=
-		{
-			"zbytek"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"dz\gear\medical\data\antidote_co.paa"
-		};
+		hiddenSelections[]={"zbytek"};
+		hiddenSelectionsTextures[]={"dz\gear\medical\data\antidote_co.paa"};
 	};
 	
-	class StaticObj_TerjeInjectorZivirol : HouseNoDestruct
+	class StaticObj_TerjeInjectorZivirol : StaticObj_TerjeInjector
 	{
 		scope=1;
-		model="dz\gear\medical\morphine.p3d";
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_purple_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_purple_co.paa"};
 	};
 	
-	class StaticObj_TerjeInjectorAmoxiclav : HouseNoDestruct
+	class StaticObj_TerjeInjectorAmoxiclav : StaticObj_TerjeInjector
 	{
 		scope=1;
-		model="dz\gear\medical\morphine.p3d";
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_blue_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_blue_co.paa"};
 	};
 	
-	class StaticObj_TerjeInjectorNeirox : HouseNoDestruct
+	class StaticObj_TerjeInjectorNeirox : StaticObj_TerjeInjector
 	{
 		scope=1;
-		model="dz\gear\medical\morphine.p3d";
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_agua_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_agua_co.paa"};
 	};
 	
-	class StaticObj_TerjeInjectorErythropoietin : HouseNoDestruct
+	class StaticObj_TerjeInjectorErythropoietin : StaticObj_TerjeInjector
 	{
 		scope=1;
-		model="dz\gear\medical\morphine.p3d";
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_darkred_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_darkred_co.paa"};
 	};
 	
-	class StaticObj_TerjeInjectorNovichek : HouseNoDestruct
+	class StaticObj_TerjeInjectorNovichek : StaticObj_TerjeInjector
 	{
 		scope=1;
-		model="dz\gear\medical\morphine.p3d";
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_black_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_black_co.paa"};
 	};
 	
-	class StaticObj_TerjeInjectorPromidol: HouseNoDestruct
+	class StaticObj_TerjeInjectorPromidol: StaticObj_TerjeInjector
 	{
 		scope=1;
-		model="dz\gear\medical\morphine.p3d";
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_viogreen_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_viogreen_co.paa"};
 	};
 	
-	class StaticObj_TerjeInjectorTopoizomeraza: HouseNoDestruct
+	class StaticObj_TerjeInjectorTopoizomeraza: StaticObj_TerjeInjector
 	{
 		scope=1;
-		model="dz\gear\medical\morphine.p3d";
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_pinkred_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_pinkred_co.paa"};
 	};
 	
-	class StaticObj_TerjeInjectorErytromixelin: HouseNoDestruct
+	class StaticObj_TerjeInjectorErytromixelin: StaticObj_TerjeInjector
 	{
 		scope=1;
-		model="dz\gear\medical\morphine.p3d";
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_orangebrown_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_orangebrown_co.paa"};
 	};
 	
-	class StaticObj_TerjeInjectorStomaproxidal: HouseNoDestruct
+	class StaticObj_TerjeInjectorStomaproxidal: StaticObj_TerjeInjector
 	{
 		scope=1;
-		model="dz\gear\medical\morphine.p3d";
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_dirtyviolete_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_dirtyviolete_co.paa"};
 	};
 	
-	class StaticObj_TerjeInjectorRabinucoline: HouseNoDestruct
+	class StaticObj_TerjeInjectorRabinucoline: StaticObj_TerjeInjector
 	{
 		scope=1;
-		model="dz\gear\medical\morphine.p3d";
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_celugreen_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_celugreen_co.paa"};
 	};
 	
-	class StaticObj_TerjeInjectorAmfitalicyne : HouseNoDestruct
+	class StaticObj_TerjeInjectorAmfitalicyne : StaticObj_TerjeInjector
 	{
 		scope=1;
-		model="dz\gear\medical\morphine.p3d";
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_bluered_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_bluered_co.paa"};
 	};
 	
-	class StaticObj_TerjeInjectorReanimatal : HouseNoDestruct
+	class StaticObj_TerjeInjectorReanimatal : StaticObj_TerjeInjector
 	{
 		scope=1;
-		model="dz\gear\medical\morphine.p3d";
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_infistar_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_infistar_co.paa"};
 	};
 	
-	class StaticObj_TerjeInjectorPropital : HouseNoDestruct
+	class StaticObj_TerjeInjectorPropital : StaticObj_TerjeInjector
 	{
 		scope=1;
-		model="dz\gear\medical\morphine.p3d";
-		hiddenSelections[]={"zbytek"};
-		hiddenSelectionsTextures[]={ "TerjeMedicine\Injectors\injector_propital_co.paa" };
+		hiddenSelectionsTextures[]={"TerjeMedicine\Injectors\data\injector_propital_co.paa"};
 	};
 };
