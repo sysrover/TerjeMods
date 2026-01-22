@@ -962,101 +962,79 @@ class CfgVehicles
 	};
 
 	class HouseNoDestruct;
-
-	class StaticObj_TerjePillsMagnesiumSulfate : HouseNoDestruct
+	class StaticObj_TerjePills_capsule : HouseNoDestruct
 	{
-		scope=1;
 		model="TerjeMedicine\Pills\capsule\capsule.p3d";
 		hiddenSelections[]={"zbytek"};
+	};
+	class StaticObj_TerjePills_oval : HouseNoDestruct
+	{
+		model="TerjeMedicine\Pills\oval\oval.p3d";
+		hiddenSelections[]={"zbytek"};
+	};
+	class StaticObj_TerjePills_circle : HouseNoDestruct
+	{
+		model="TerjeMedicine\Pills\circle\circle.p3d";
+		hiddenSelections[]={"zbytek"};
+	};
+	class StaticObj_TerjePillsMagnesiumSulfate : StaticObj_TerjePills_capsule
+	{
+		scope=1;
 		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\capsule\data\capsule_4_co.paa"};
 	};
-	
-	class StaticObj_TerjePillsAdepress : HouseNoDestruct
+	class StaticObj_TerjePillsAdepress : StaticObj_TerjePills_capsule
 	{
 		scope=1;
-		model="TerjeMedicine\Pills\capsule\capsule.p3d";
-		hiddenSelections[]={"zbytek"};
 		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\capsule\data\capsule_5_co.paa"};
 	};
-	
-	class StaticObj_TerjePillsB190 : HouseNoDestruct
+	class StaticObj_TerjePillsB190 : StaticObj_TerjePills_capsule
 	{
 		scope=1;
-		model="TerjeMedicine\Pills\capsule\capsule.p3d";
-		hiddenSelections[]={"zbytek"};
 		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\capsule\data\capsule_6_co.paa"};
 	};
-	
-	class StaticObj_TerjePillsAnalgin : HouseNoDestruct
+	class StaticObj_TerjePillsAnalgin : StaticObj_TerjePills_oval
 	{
 		scope=1;
-		model="TerjeMedicine\Pills\oval\oval.p3d";
-		hiddenSelections[]={"zbytek"};
 		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\oval\data\oval_7_co.paa"};
 	};
-	
-	class StaticObj_TerjePillsNimesulid : HouseNoDestruct
+	class StaticObj_TerjePillsNimesulid : StaticObj_TerjePills_oval
 	{
 		scope=1;
-		model="TerjeMedicine\Pills\oval\oval.p3d";
-		hiddenSelections[]={"zbytek"};
 		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\oval\data\oval_8_co.paa"};
 	};
-	
-	class StaticObj_TerjePillsParacetamol : HouseNoDestruct
+	class StaticObj_TerjePillsParacetamol : StaticObj_TerjePills_oval
 	{
 		scope=1;
-		model="TerjeMedicine\Pills\oval\oval.p3d";
-		hiddenSelections[]={"zbytek"};
 		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\oval\data\oval_10_co.paa"};
 	};
-	
-	class StaticObj_TerjePillsIbuprofen : HouseNoDestruct
+	class StaticObj_TerjePillsIbuprofen : StaticObj_TerjePills_capsule
 	{
 		scope=1;
-		model="TerjeMedicine\Pills\capsule\capsule.p3d";
-		hiddenSelections[]={"zbytek"};
 		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\capsule\data\capsule_11_co.paa"};
 	};
-	
-	class StaticObj_TerjePillsNurofen : HouseNoDestruct
+	class StaticObj_TerjePillsNurofen : StaticObj_TerjePills_oval
 	{
 		scope=1;
-		model="TerjeMedicine\Pills\oval\oval.p3d";
-		hiddenSelections[]={"zbytek"};
 		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\oval\data\oval_6_co.paa"};
 	};
-	
-	class StaticObj_TerjePillsAmoxiclav : HouseNoDestruct
+	class StaticObj_TerjePillsAmoxiclav : StaticObj_TerjePills_oval
 	{
 		scope=1;
-		model="TerjeMedicine\Pills\oval\oval.p3d";
-		hiddenSelections[]={"zbytek"};
 		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\oval\data\oval_5_co.paa"};
-
 	};
-	
-	class StaticObj_TerjePillsPiperacylin : HouseNoDestruct
+	class StaticObj_TerjePillsPiperacylin : StaticObj_TerjePills_oval
 	{
 		scope=1;
-		model="TerjeMedicine\Pills\oval\oval.p3d";
-		hiddenSelections[]={"zbytek"};
 		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\oval\data\oval_4_co.paa"};
 	};
-	
-	class StaticObj_TerjePillsAmibaktam : HouseNoDestruct
+	class StaticObj_TerjePillsAmibaktam : StaticObj_TerjePills_oval
 	{
 		scope=1;
-		model="TerjeMedicine\Pills\oval\oval.p3d";
-		hiddenSelections[]={"zbytek"};
 		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\oval\data\oval_3_co.paa"};
 	};
-	
-	class StaticObj_TerjePillsPolisorb : HouseNoDestruct
+	class StaticObj_TerjePillsPolisorb : StaticObj_TerjePills_oval
 	{
 		scope=1;
-		model="TerjeMedicine\Pills\oval\oval.p3d";
-		hiddenSelections[]={"zbytek"};
 		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\oval\data\oval_2_co.paa"};
 	};
 };
