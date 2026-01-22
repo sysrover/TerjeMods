@@ -19,7 +19,6 @@ class CfgVehicles
 	class TerjeBookAthletic1: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_ATHLETIC1";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_athletic1_co.paa"};
 		
@@ -31,7 +30,6 @@ class CfgVehicles
 	class TerjeBookAthletic2: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_ATHLETIC2";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_athletic2_co.paa"};
 		
@@ -43,7 +41,6 @@ class CfgVehicles
 	class TerjeBookAthletic3: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_ATHLETIC3";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_athletic3_co.paa"};
 		
@@ -55,7 +52,6 @@ class CfgVehicles
 	class TerjeBookAthletic4: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_ATHLETIC4";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_athletic4_co.paa"};
 		
@@ -67,7 +63,6 @@ class CfgVehicles
 	class TerjeBookAthletic5: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_ATHLETIC5";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_athletic5_co.paa"};
 		
@@ -79,7 +74,6 @@ class CfgVehicles
 	class TerjeBookFishing1: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_FISHING1";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_fishing1_co.paa"};
 		
@@ -91,7 +85,6 @@ class CfgVehicles
 	class TerjeBookFishing2: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_FISHING2";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_fishing2_co.paa"};
 		
@@ -103,7 +96,6 @@ class CfgVehicles
 	class TerjeBookFishing3: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_FISHING3";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_fishing3_co.paa"};
 		
@@ -115,7 +107,6 @@ class CfgVehicles
 	class TerjeBookFishing4: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_FISHING4";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_fishing4_co.paa"};
 		
@@ -127,7 +118,6 @@ class CfgVehicles
 	class TerjeBookFishing5: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_FISHING5";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_fishing5_co.paa"};
 		
@@ -139,7 +129,6 @@ class CfgVehicles
 	class TerjeBookHunting1: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_HUNTING1";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_hunting1_co.paa"};
 		
@@ -151,7 +140,6 @@ class CfgVehicles
 	class TerjeBookHunting2: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_HUNTING2";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_hunting2_co.paa"};
 		
@@ -163,7 +151,6 @@ class CfgVehicles
 	class TerjeBookHunting3: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_HUNTING3";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_hunting3_co.paa"};
 		
@@ -175,7 +162,6 @@ class CfgVehicles
 	class TerjeBookHunting4: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_HUNTING4";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_hunting4_co.paa"};
 		
@@ -187,7 +173,6 @@ class CfgVehicles
 	class TerjeBookHunting5: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_HUNTING5";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_hunting5_co.paa"};
 		
@@ -199,7 +184,6 @@ class CfgVehicles
 	class TerjeBookMetabolism1: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_METABOLISM1";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_metabolism1_co.paa"};
 		
@@ -211,7 +195,6 @@ class CfgVehicles
 	class TerjeBookMetabolism2: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_METABOLISM2";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_metabolism2_co.paa"};
 		
@@ -223,7 +206,6 @@ class CfgVehicles
 	class TerjeBookMetabolism3: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_METABOLISM3";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_metabolism3_co.paa"};
 		
@@ -235,7 +217,6 @@ class CfgVehicles
 	class TerjeBookMetabolism4: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_METABOLISM4";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_metabolism4_co.paa"};
 		
@@ -247,7 +228,6 @@ class CfgVehicles
 	class TerjeBookMetabolism5: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_METABOLISM5";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_metabolism5_co.paa"};
 		
@@ -259,7 +239,6 @@ class CfgVehicles
 	class TerjeBookStealth1: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STEALTH1";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_stealth1_co.paa"};
 		
@@ -271,7 +250,6 @@ class CfgVehicles
 	class TerjeBookStealth2: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STEALTH2";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_stealth2_co.paa"};
 		
@@ -283,7 +261,6 @@ class CfgVehicles
 	class TerjeBookStealth3: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STEALTH3";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_stealth3_co.paa"};
 		
@@ -295,7 +272,6 @@ class CfgVehicles
 	class TerjeBookStealth4: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STEALTH4";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_stealth4_co.paa"};
 		
@@ -307,7 +283,6 @@ class CfgVehicles
 	class TerjeBookStealth5: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STEALTH5";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_stealth5_co.paa"};
 		
@@ -319,7 +294,6 @@ class CfgVehicles
 	class TerjeBookStrength1: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STRENGTH1";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_strength1_co.paa"};
 		
@@ -331,7 +305,6 @@ class CfgVehicles
 	class TerjeBookStrength2: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STRENGTH2";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_strength2_co.paa"};
 		
@@ -343,7 +316,6 @@ class CfgVehicles
 	class TerjeBookStrength3: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STRENGTH3";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_strength3_co.paa"};
 		
@@ -355,7 +327,6 @@ class CfgVehicles
 	class TerjeBookStrength4: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STRENGTH4";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_strength4_co.paa"};
 		
@@ -367,7 +338,6 @@ class CfgVehicles
 	class TerjeBookStrength5: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_STRENGTH5";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_strength5_co.paa"};
 		
@@ -379,7 +349,6 @@ class CfgVehicles
 	class TerjeBookSurvival1: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_SURVIVAL1";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_survival1_co.paa"};
 		
@@ -391,7 +360,6 @@ class CfgVehicles
 	class TerjeBookSurvival2: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_SURVIVAL2";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_survival2_co.paa"};
 		
@@ -403,7 +371,6 @@ class CfgVehicles
 	class TerjeBookSurvival3: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_SURVIVAL3";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_survival3_co.paa"};
 		
@@ -415,7 +382,6 @@ class CfgVehicles
 	class TerjeBookSurvival4: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_SURVIVAL4";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_survival4_co.paa"};
 		
@@ -427,7 +393,6 @@ class CfgVehicles
 	class TerjeBookSurvival5: TerjeBookBase
 	{
 		scope=2;
-		rotationFlags=1;
 		displayName="#STR_TERJESKILL_BOOK_SURVIVAL5";
 		hiddenSelectionsTextures[]={"TerjeSkills\Books\data\book_survival5_co.paa"};
 		
