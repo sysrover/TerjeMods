@@ -58,7 +58,7 @@ class CfgVehicles
 		medSleepingIncrementTimeSec = 1.0; // Time per 1ml
 		displayName="#STR_TERJEDRINK_MADBULL_NAME";
 		descriptionShort="#STR_TERJEDRINK_MADBULL_DESC";
-		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\madbull.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\madbull.paa"};
 	};
 	class TerjeDrinkGang: TerjeEnergyDrink
 	{
@@ -67,7 +67,7 @@ class CfgVehicles
 		medSleepingIncrementTimeSec = 1.0; // Time per 1ml
 		displayName="#STR_TERJEDRINK_GANG_NAME";
 		descriptionShort="#STR_TERJEDRINK_GANG_DESC";
-		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\gang.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\gang.paa"};
 	};
 	class TerjeDrinkYaguar: TerjeEnergyDrink
 	{
@@ -76,7 +76,7 @@ class CfgVehicles
 		medSleepingIncrementTimeSec = 1.0; // Time per 1ml
 		displayName="#STR_TERJEDRINK_YAGUAR_NAME";
 		descriptionShort="#STR_TERJEDRINK_YAGUAR_DESC";
-		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\yaguar.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\yaguar.paa"};
 	};
 	class TerjeDrinkPrayboy: TerjeEnergyDrink
 	{
@@ -85,7 +85,7 @@ class CfgVehicles
 		medSleepingIncrementTimeSec = 1.0; // Time per 1ml
 		displayName="#STR_TERJEDRINK_PRAYBOY_NAME";
 		descriptionShort="#STR_TERJEDRINK_PRAYBOY_DESC";
-		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\prayboy.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\prayboy.paa"};
 	};
 	class TerjeDrink6Energy: TerjeEnergyDrink
 	{
@@ -94,7 +94,7 @@ class CfgVehicles
 		medSleepingIncrementTimeSec = 0.8; // Time per 1ml
 		displayName="#STR_TERJEDRINK_6ENERGY_NAME";
 		descriptionShort="#STR_TERJEDRINK_6ENERGY_DESC";
-		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\6energy.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\6energy.paa"};
 	};
 
 	class HouseNoDestruct;
@@ -104,34 +104,34 @@ class CfgVehicles
 		scope=1;
 		model="dz\gear\drinks\SodaCan.p3d";
 		hiddenSelections[]={"camoGround"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\madbull.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\madbull.paa"};
 	};
 	class StaticObj_TerjeDrinkGang: HouseNoDestruct
 	{
 		scope=1;
 		model="dz\gear\drinks\SodaCan.p3d";
 		hiddenSelections[]={"camoGround"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\gang.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\gang.paa"};
 	};
 	class StaticObj_TerjeDrinkYaguar: HouseNoDestruct
 	{
 		scope=1;
 		model="dz\gear\drinks\SodaCan.p3d";
 		hiddenSelections[]={"camoGround"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\yaguar.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\yaguar.paa"};
 	};
 	class StaticObj_TerjeDrinkPrayboy: HouseNoDestruct
 	{
 		scope=1;
 		model="dz\gear\drinks\SodaCan.p3d";
 		hiddenSelections[]={"camoGround"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\prayboy.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\prayboy.paa"};
 	};
 	class StaticObj_TerjeDrink6Energy: HouseNoDestruct
 	{
 		scope=1;
 		model="dz\gear\drinks\SodaCan.p3d";
 		hiddenSelections[]={"camoGround"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\6energy.paa"};
+		hiddenSelectionsTextures[]={"TerjeMedicine\Drinks\data\6energy.paa"};
 	};
 };
