@@ -38,7 +38,21 @@ modded class PlayerBase
 		m_terjePlayerSpawnState = state;
 	}
 	
-	void OnTerjePlayerLoaded() {}
+	void OnTerjePlayerLoaded() 
+	{
+		// Load persisted blood type from terje profile
+		if (GetGame() && GetGame().IsDedicatedServer())
+		{
+			if (GetTerjeSettingBool(TerjeSettingsCollection.CORE_PERSIST_BLOOD_TYPE) && GetTerjeProfile() != null)
+			{
+				int bloodType = GetTerjeProfile().GetBloodType();
+				if (bloodType != -1)
+				{
+					SetBloodType(bloodType);
+				}
+			}
+		}
+	}
 	
 	void OnTerjePlayerRespawned() {}
 	
@@ -276,7 +290,14 @@ modded class PlayerBase
 	
 	void OnTerjePlayerKilledEvent()
 	{
-	
+		// Save persisted blood type to terje profile
+		if (GetGame() && GetGame().IsDedicatedServer())
+		{
+			if (GetTerjeSettingBool(TerjeSettingsCollection.CORE_PERSIST_BLOOD_TYPE) && GetTerjeProfile() != null)
+			{
+				GetTerjeProfile().SetBloodType(GetBloodType());
+			}
+		}
 	}
 	
 	override void OnDisconnect()
