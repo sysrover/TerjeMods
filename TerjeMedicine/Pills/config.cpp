@@ -165,31 +165,6 @@ class CfgVehicles
 		medSkillExpAddToSelf=5;
 		medicalPillsCategory=1;
 	};
-	class TerjePillsCharcoalTablets: CharcoalTablets
-	{
-		model="TerjeMedicine\Pills\oval.p3d";
-		rotationFlags=1;
-		hiddenSelections[]={"tablets"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\data\oval_11_co.paa"};
-		class DamageSystem
-		{
-			class GlobalHealth
-			{
-				class Health
-				{
-					hitpoints=100;
-					healthLevels[]=
-					{
-						{1.0,{"TerjeMedicine\Pills\oval\data\oval_mat.rvmat"}},
-						{0.7,{"TerjeMedicine\Pills\oval\data\oval_mat.rvmat"}},
-						{0.5,{"TerjeMedicine\Pills\oval\data\oval_mat_damage.rvmat"}},
-						{0.3,{"TerjeMedicine\Pills\oval\data\oval_mat_damage.rvmat"}},
-						{0.0,{"TerjeMedicine\Pills\oval\data\oval_mat_destruct.rvmat"}}
-					};
-				};
-			};
-		};
-	};
 	class ChelatingTablets: Edible_Base
 	{
 		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
@@ -213,31 +188,6 @@ class CfgVehicles
 		medicalItem=1;
 		medicalPillsCategory=1;
 	};
-	class TerjePillsPainkillerTablets: PainkillerTablets
-	{
-		model="TerjeMedicine\Pills\capsule.p3d";
-		rotationFlags=1;
-		hiddenSelections[]={"tablets"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\data\capsule_2_co.paa"};
-		class DamageSystem
-		{
-			class GlobalHealth
-			{
-				class Health
-				{
-					hitpoints=100;
-					healthLevels[]=
-					{
-						{1.0,{"TerjeMedicine\Pills\capsule\data\capsule_mat.rvmat"}},
-						{0.7,{"TerjeMedicine\Pills\capsule\data\capsule_mat.rvmat"}},
-						{0.5,{"TerjeMedicine\Pills\capsule\data\capsule_mat_damage.rvmat"}},
-						{0.3,{"TerjeMedicine\Pills\capsule\data\capsule_mat_damage.rvmat"}},
-						{0.0,{"TerjeMedicine\Pills\capsule\data\capsule_mat_destruct.rvmat"}}
-					};
-				};
-			};
-		};
-	};
 	class TetracyclineAntibiotics: Edible_Base
 	{
 		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
@@ -251,30 +201,45 @@ class CfgVehicles
 		medicalItem=1;
 		medicalPillsCategory=1;
 	};
-	class TerjePillsTetracyclineAntibiotics: TetracyclineAntibiotics
+	
+	class TerjePillsCharcoalTablets: TerjePills_Oval
 	{
-		model="TerjeMedicine\Pills\capsule.p3d";
-		rotationFlags=1;
-		hiddenSelections[]={"tablets"};
-		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\data\capsule_3_co.paa"};
-		class DamageSystem
-		{
-			class GlobalHealth
-			{
-				class Health
-				{
-					hitpoints=100;
-					healthLevels[]=
-					{
-						{1.0,{"TerjeMedicine\Pills\capsule\data\capsule_mat.rvmat"}},
-						{0.7,{"TerjeMedicine\Pills\capsule\data\capsule_mat.rvmat"}},
-						{0.5,{"TerjeMedicine\Pills\capsule\data\capsule_mat_damage.rvmat"}},
-						{0.3,{"TerjeMedicine\Pills\capsule\data\capsule_mat_damage.rvmat"}},
-						{0.0,{"TerjeMedicine\Pills\capsule\data\capsule_mat_destruct.rvmat"}}
-					};
-				};
-			};
-		};
+		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
+		varQuantityInit=10;
+		varQuantityMin=0;
+		varQuantityMax=10;
+		medAntipoisonLevel=1;
+		medAntipoisonTimeSec=300;
+		overdosedIncrement=0.01;
+		medicalItem=1;
+		medSkillExpAddToSelf=5;
+		medicalPillsCategory=1;
+	};
+	class TerjePillsPainkillerTablets: TerjePills_Capsule
+	{
+		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
+		varQuantityInit=10;
+		varQuantityMin=0;
+		varQuantityMax=10;
+		medPainkillerLevel=1;
+		medPainkillerTimeSec=300;
+		medSkillExpAddToSelf=10;
+		overdosedIncrement=0.2;
+		medicalItem=1;
+		medicalPillsCategory=1;
+	};
+	class TerjePillsTetracyclineAntibiotics: TerjePills_Capsule
+	{
+		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
+		varQuantityInit=10;
+		varQuantityMin=0;
+		varQuantityMax=10;
+		medAntibioticLevel=1;
+		medAntibioticsTimeSec=300;
+		medSkillExpAddToSelf=10;
+		overdosedIncrement=0.45;
+		medicalItem=1;
+		medicalPillsCategory=1;
 	};
 	
 	class TerjePillsMagnesiumSulfate: TerjePills_Capsule
