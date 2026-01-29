@@ -47,6 +47,24 @@ class CfgVehicles
 		medHematomaHealMaxTimeSec=1800;
 		medAdrenalinMaxTimeSec=1800;
 		medAntidepresantMaxTimer=1800;
+		class DamageSystem
+		{
+			class GlobalHealth
+			{
+				class Health
+				{
+					hitpoints=100;
+					healthLevels[]=
+					{
+						{1.0,{"dz\gear\medical\data\injectionvial.rvmat"}},
+						{0.7,{"dz\gear\medical\data\injectionvial.rvmat"}},
+						{0.5,{"dz\gear\medical\data\injectionvial_damage.rvmat"}},
+						{0.3,{"dz\gear\medical\data\injectionvial_damage.rvmat"}},
+						{0.0,{"dz\gear\medical\data\injectionvial_destruct.rvmat"}}
+					};
+				};
+			};
+		};
 	};
 	
 	// SIMPLE AMPOULS
