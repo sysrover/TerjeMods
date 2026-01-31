@@ -17,16 +17,16 @@ modded class ActionCPR
 	
 	override void OnFinishProgressServer(ActionData action_data)
 	{
+		PlayerBase victim = PlayerBase.Cast(action_data.m_Target.GetObject());
 		if (GetTerjeSettingBool(TerjeSettingsCollection.MEDICINE_KNOCKOUT_REVIVE_BY_CPR))
 		{
 			PlayerBase operator = action_data.m_Player;
-			PlayerBase victim = PlayerBase.Cast(action_data.m_Target.GetObject());
 			if (!TerjeDefibrilateKnockoutServer(victim, operator))
 			{
 				return;
 			}
 		}
-		else if (victim.GetTerjeStats() && victim.GetTerjeStats().IsInKnockout())
+		else if (victim && victim.GetTerjeStats() && victim.GetTerjeStats().IsInKnockout())
 		{
 			return;
 		}
