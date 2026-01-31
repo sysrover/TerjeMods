@@ -212,6 +212,11 @@ class CfgVehicles
 		medicalItem=1;
 	};
 
+	class Thermometer: Inventory_Base
+	{
+		medicalItem=1;
+	};
+
 	class Bandana_ColorBase: Clothing
 	{
 		medBloodStop=2;
