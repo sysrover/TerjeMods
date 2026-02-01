@@ -4,26 +4,13 @@ modded class WoundInfectionMdfr
 	{
 		return false;
 	}
-	
 	override protected bool DeactivateCondition(PlayerBase player)
 	{
 		return false;
 	}
-	
-	override protected void OnActivate(PlayerBase player)
-	{
-
-	}
-
-	override protected void OnDeactivate(PlayerBase player)
-	{
-
-	}
-	
-	override void OnTick(PlayerBase player, float deltaT)
-	{
-		
-	}
+	override protected void OnActivate(PlayerBase player);
+	override protected void OnDeactivate(PlayerBase player);
+	override void OnTick(PlayerBase player, float deltaT);
 }
 
 modded class WoundInfectStage1Mdfr
@@ -32,26 +19,13 @@ modded class WoundInfectStage1Mdfr
 	{
 		return false;
 	}
-	
 	override protected bool DeactivateCondition(PlayerBase player)
 	{
 		return false;
 	}
-	
-	override protected void OnActivate(PlayerBase player)
-	{
-
-	}
-
-	override protected void OnDeactivate(PlayerBase player)
-	{
-
-	}
-	
-	override void OnTick(PlayerBase player, float deltaT)
-	{
-		
-	}
+	override protected void OnActivate(PlayerBase player);
+	override protected void OnDeactivate(PlayerBase player);
+	override void OnTick(PlayerBase player, float deltaT);
 }
 
 modded class WoundInfectStage2Mdfr
@@ -60,24 +34,11 @@ modded class WoundInfectStage2Mdfr
 	{
 		return false;
 	}
-	
 	override protected bool DeactivateCondition(PlayerBase player)
 	{
 		return false;
 	}
-	
-	override protected void OnActivate(PlayerBase player)
-	{
-
-	}
-
-	override protected void OnDeactivate(PlayerBase player)
-	{
-
-	}
-	
-	override void OnTick(PlayerBase player, float deltaT)
-	{
-		
-	}
+	override protected void OnActivate(PlayerBase player);
+	override protected void OnDeactivate(PlayerBase player);
+	override void OnTick(PlayerBase player, float deltaT);
 }
