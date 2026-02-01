@@ -4,26 +4,13 @@ modded class ContaminationStage1Mdfr
 	{
 		return false;
 	}
-	
 	override protected bool DeactivateCondition(PlayerBase player)
 	{
 		return false;
 	}
-	
-	override protected void OnActivate(PlayerBase player)
-	{
-
-	}
-
-	override protected void OnDeactivate(PlayerBase player)
-	{
-
-	}
-	
-	override void OnTick(PlayerBase player, float deltaT)
-	{
-		
-	}
+	override protected void OnActivate(PlayerBase player);
+	override protected void OnDeactivate(PlayerBase player);
+	override void OnTick(PlayerBase player, float deltaT);
 }
 
 modded class ContaminationStage2Mdfr
@@ -32,26 +19,13 @@ modded class ContaminationStage2Mdfr
 	{
 		return false;
 	}
-	
 	override protected bool DeactivateCondition(PlayerBase player)
 	{
 		return false;
 	}
-	
-	override protected void OnActivate(PlayerBase player)
-	{
-
-	}
-
-	override protected void OnDeactivate(PlayerBase player)
-	{
-
-	}
-	
-	override void OnTick(PlayerBase player, float deltaT)
-	{
-		
-	}
+	override protected void OnActivate(PlayerBase player);
+	override protected void OnDeactivate(PlayerBase player);
+	override void OnTick(PlayerBase player, float deltaT);
 }
 
 modded class ContaminationStage3Mdfr
@@ -60,51 +34,11 @@ modded class ContaminationStage3Mdfr
 	{
 		return false;
 	}
-	
 	override protected bool DeactivateCondition(PlayerBase player)
 	{
 		return false;
 	}
-	
-	override protected void OnActivate(PlayerBase player)
-	{
-
-	}
-
-	override protected void OnDeactivate(PlayerBase player)
-	{
-
-	}
-	
-	override void OnTick(PlayerBase player, float deltaT)
-	{
-		
-	}
+	override protected void OnActivate(PlayerBase player);
+	override protected void OnDeactivate(PlayerBase player);
+	override void OnTick(PlayerBase player, float deltaT);
 }
-
-modded class AreaExposureMdfr
-{
-	override void BleedingSourceCreateCheck(PlayerBase player)
-	{
-		bool biohazardSkinIrritation = false;
-		if (GetTerjeSettingBool(TerjeSettingsCollection.MEDICINE_BIOHAZARD_SKIN_IRRITATION, biohazardSkinIrritation) && biohazardSkinIrritation)
-		{
-			super.BleedingSourceCreateCheck(player);
-		}
-	}
-	
-	override void ApplyAgentsToBleedingSources(PlayerBase player, float deltaT)
-	{
-		super.ApplyAgentsToBleedingSources(player, deltaT);
-		
-		if (player && player.GetTerjeStats())
-		{
-			int openWounds = player.GetTerjeStats().GetStubWounds();
-			if (openWounds > 0)
-			{
-				player.InsertAgent(eAgents.CHEMICAL_POISON, openWounds * deltaT);
-			}
-		}
-	}
-}
-
