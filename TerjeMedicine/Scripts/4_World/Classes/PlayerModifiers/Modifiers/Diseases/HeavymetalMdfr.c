@@ -4,26 +4,13 @@ modded class HeavyMetalMdfr : ModifierBase
 	{
 		return false;
 	}
-	
 	override protected bool DeactivateCondition(PlayerBase player)
 	{
 		return false;
 	}
-	
-	override protected void OnActivate(PlayerBase player)
-	{
-
-	}
-
-	override protected void OnDeactivate(PlayerBase player)
-	{
-
-	}
-	
-	override void OnTick(PlayerBase player, float deltaT)
-	{
-		
-	}
+	override protected void OnActivate(PlayerBase player);
+	override protected void OnDeactivate(PlayerBase player);
+	override void OnTick(PlayerBase player, float deltaT);
 }
 
 modded class HeavyMetalPhase1Mdfr : HeavyMetalMdfr
@@ -32,26 +19,13 @@ modded class HeavyMetalPhase1Mdfr : HeavyMetalMdfr
 	{
 		return false;
 	}
-	
 	override protected bool DeactivateCondition(PlayerBase player)
 	{
 		return false;
 	}
-	
-	override protected void OnActivate(PlayerBase player)
-	{
-
-	}
-
-	override protected void OnDeactivate(PlayerBase player)
-	{
-
-	}
-	
-	override void OnTick(PlayerBase player, float deltaT)
-	{
-		
-	}
+	override protected void OnActivate(PlayerBase player);
+	override protected void OnDeactivate(PlayerBase player);
+	override void OnTick(PlayerBase player, float deltaT);
 }
 
 modded class HeavyMetalPhase2Mdfr : HeavyMetalMdfr
@@ -60,26 +34,13 @@ modded class HeavyMetalPhase2Mdfr : HeavyMetalMdfr
 	{
 		return false;
 	}
-	
 	override protected bool DeactivateCondition(PlayerBase player)
 	{
 		return false;
 	}
-	
-	override protected void OnActivate(PlayerBase player)
-	{
-
-	}
-
-	override protected void OnDeactivate(PlayerBase player)
-	{
-
-	}
-	
-	override void OnTick(PlayerBase player, float deltaT)
-	{
-		
-	}
+	override protected void OnActivate(PlayerBase player);
+	override protected void OnDeactivate(PlayerBase player);
+	override void OnTick(PlayerBase player, float deltaT);
 }
 
 modded class HeavyMetalPhase3Mdfr : HeavyMetalMdfr
@@ -88,24 +49,11 @@ modded class HeavyMetalPhase3Mdfr : HeavyMetalMdfr
 	{
 		return false;
 	}
-	
 	override protected bool DeactivateCondition(PlayerBase player)
 	{
 		return false;
 	}
-	
-	override protected void OnActivate(PlayerBase player)
-	{
-
-	}
-
-	override protected void OnDeactivate(PlayerBase player)
-	{
-
-	}
-	
-	override void OnTick(PlayerBase player, float deltaT)
-	{
-		
-	}
+	override protected void OnActivate(PlayerBase player);
+	override protected void OnDeactivate(PlayerBase player);
+	override void OnTick(PlayerBase player, float deltaT);
 }
