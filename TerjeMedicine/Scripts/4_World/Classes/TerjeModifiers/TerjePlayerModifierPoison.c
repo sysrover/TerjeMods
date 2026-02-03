@@ -48,16 +48,16 @@ class TerjePlayerModifierPoison : TerjePlayerModifierBase
 			m_firstSymptomTime += deltaTime;
 		}
 		
-		float perkPoisonres;
-		float perkSvdinner;
 		float perkPoisonresMod = 1.0;
 		float perkSvdinnerMod = 1.0;
 		if (player.GetTerjeSkills())
 		{
+			float perkPoisonres;
 			if (player.GetTerjeSkills().GetPerkValue("immunity", "poisonres", perkPoisonres))
 			{
 				perkPoisonresMod += perkPoisonres;
 			}
+			float perkSvdinner;
 			if (player.GetTerjeSkills().GetPerkValue("immunity", "svdinner", perkSvdinner))
 			{
 				perkSvdinnerMod += perkSvdinner;
