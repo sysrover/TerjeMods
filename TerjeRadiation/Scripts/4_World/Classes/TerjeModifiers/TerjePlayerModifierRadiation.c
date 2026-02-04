@@ -32,7 +32,7 @@ class TerjePlayerModifierRadiation : TerjePlayerModifierBase
 		
 		if (m_immunityInterval > 0)
 		{
-			m_immunityInterval = m_immunityInterval - deltaTime;
+			m_immunityInterval -= deltaTime;
 		}
 		
 		float radiationValue = player.GetTerjeStats().GetRadiationValue();
@@ -80,39 +80,35 @@ class TerjePlayerModifierRadiation : TerjePlayerModifierBase
 		
 		if (radiationValue > 0)
 		{
+			float immunityMod = 1.0;
+			float perkRadgenMod = 1.0;
+			if (player.GetTerjeSkills())
+			{
+				float resdiseasesmod;
+				if (player.GetTerjeSkills().GetSkillModifierValue("immunity", "resdiseasesmod", resdiseasesmod))
+				{
+					immunityMod += resdiseasesmod;
+				}
+				float radregen;
+				if (player.GetTerjeSkills() && player.GetTerjeSkills().GetPerkValue("immunity", "radregen", radregen))
+				{
+					perkRadgenMod += radregen;
+				}
+			}
+			
 			int radiationLevel = (int)radiationValue;
 			float radiationDecPerSec = 0;
 			if (antiradLevel > 0)
 			{
 				GetTerjeSettingFloat(TerjeSettingsCollection.RADIATION_MEDS_DEC_PER_SEC, radiationDecPerSec);
-				radiationDecPerSec = radiationDecPerSec * ((antiradLevel - radiationLevel) + 1);
+				radiationDecPerSec *= (antiradLevel - radiationLevel) + 1;
 			}
 			else
 			{
 				GetTerjeSettingFloat(TerjeSettingsCollection.RADIATION_COMMON_DEC_PER_SEC, radiationDecPerSec);	
 			}
 			
-			float immunityMod;
-			if (player.GetTerjeSkills() && player.GetTerjeSkills().GetSkillModifierValue("immunity", "resdiseasesmod", immunityMod))
-			{
-				immunityMod = 1.0 + immunityMod;
-			}
-			else
-			{
-				immunityMod = 1.0;
-			}
-			
-			float perkRadgenMod;
-			if (player.GetTerjeSkills() && player.GetTerjeSkills().GetPerkValue("immunity", "radregen", perkRadgenMod))
-			{
-				perkRadgenMod = 1.0 + perkRadgenMod;
-			}
-			else
-			{
-				perkRadgenMod = 1.0;
-			}
-			
-			radiationValue = radiationValue - (radiationDecPerSec * immunityMod * perkRadgenMod * deltaTime);
+			radiationValue -= (radiationDecPerSec * immunityMod * perkRadgenMod * deltaTime);
 			player.GetTerjeStats().SetRadiationValue(radiationValue);
 			
 			if (radiationValue > 1)
