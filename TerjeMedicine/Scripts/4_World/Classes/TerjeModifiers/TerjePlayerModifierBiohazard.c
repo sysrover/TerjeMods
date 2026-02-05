@@ -65,7 +65,7 @@ class TerjePlayerModifierBiohazard : TerjePlayerModifierBase
 			player.RemoveAgent(eAgents.CHEMICAL_POISON);
 		}
 		
-		int biohazardLevel = TerjeMathHelper.ClampInt((int)biohazardValue, 0, 3);
+		int biohazardLevel = TerjeMathHelper.ClampInt((int)biohazardValue, 0, 5);
 		if (m_lastBiohazardLevel == 0 && biohazardLevel > 0)
 		{
 			m_firstSymptomTime = deltaTime;
@@ -103,8 +103,8 @@ class TerjePlayerModifierBiohazard : TerjePlayerModifierBase
 			{
 				if (m_Time1 == 0 || m_NextSymptom1 == 0)
 				{
-					float biohazardLightSymptomIntervalMin;
-					float biohazardLightSymptomIntervalMax;
+					float biohazardLightSymptomIntervalMin = 0;
+					float biohazardLightSymptomIntervalMax = 0;
 					GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_LIGHT_SYMPTOM_INTERVAL_MIN, biohazardLightSymptomIntervalMin);
 					GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_LIGHT_SYMPTOM_INTERVAL_MAX, biohazardLightSymptomIntervalMax);
 					m_NextSymptom1 = Math.RandomFloatInclusive( biohazardLightSymptomIntervalMin, biohazardLightSymptomIntervalMax );
@@ -122,8 +122,8 @@ class TerjePlayerModifierBiohazard : TerjePlayerModifierBase
 			{
 				if (m_Time2 == 0 || m_NextSymptom2 == 0)
 				{
-					float biohazardHeavySymptomIntervalMin;
-					float biohazardHeavySymptomIntervalMax;
+					float biohazardHeavySymptomIntervalMin = 0;
+					float biohazardHeavySymptomIntervalMax = 0;
 					GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_HEAVY_SYMPTOM_INTERVAL_MIN, biohazardHeavySymptomIntervalMin);
 					GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_HEAVY_SYMPTOM_INTERVAL_MAX, biohazardHeavySymptomIntervalMax);
 					m_NextSymptom2 = Math.RandomFloatInclusive( biohazardHeavySymptomIntervalMin, biohazardHeavySymptomIntervalMax );
