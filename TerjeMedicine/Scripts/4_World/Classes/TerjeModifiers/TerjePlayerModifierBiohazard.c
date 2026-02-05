@@ -110,7 +110,7 @@ class TerjePlayerModifierBiohazard : TerjePlayerModifierBase
 					m_NextSymptom1 = Math.RandomFloatInclusive( biohazardLightSymptomIntervalMin, biohazardLightSymptomIntervalMax );
 				}
 				m_Time1 += deltaTime;
-				
+				if (antibiohazardLevel >= biohazardLevel) m_NextSymptom1 *= 2;
 				if (m_Time1 >= m_NextSymptom1)
 				{
 					player.GetSymptomManager().QueueUpPrimarySymptom(SymptomIDs.SYMPTOM_COUGH);
@@ -129,7 +129,7 @@ class TerjePlayerModifierBiohazard : TerjePlayerModifierBase
 					m_NextSymptom2 = Math.RandomFloatInclusive( biohazardHeavySymptomIntervalMin, biohazardHeavySymptomIntervalMax );
 				}
 				m_Time2 += deltaTime;
-				
+				if (antibiohazardLevel >= biohazardLevel) m_NextSymptom2 *= 2;
 				if (m_Time2 >= m_NextSymptom2 || m_firstSymptomTime > 5)
 				{
 					float biohazardVomitForceModifier = 1.0;
