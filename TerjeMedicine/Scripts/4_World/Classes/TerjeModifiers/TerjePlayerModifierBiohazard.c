@@ -5,14 +5,9 @@ class TerjePlayerModifierBiohazard : TerjePlayerModifierBase
 	private int m_lastBiohazardLevel = -1;
 	
 	private float m_Time1;
-	private float m_NextSymptom1;
+	private float m_NextSymptom1 = 0;
 	private float m_Time2;
-	private float m_NextSymptom2;
-	
-	private float biohazardLightSymptomIntervalMin = 0;
-	private float biohazardLightSymptomIntervalMax = 0;
-	private float biohazardHeavySymptomIntervalMin = 0;
-	private float biohazardHeavySymptomIntervalMax = 0;
+	private float m_NextSymptom2 = 0;
 	
 	override float GetTimeout()
 	{
@@ -74,15 +69,7 @@ class TerjePlayerModifierBiohazard : TerjePlayerModifierBase
 		if (m_lastBiohazardLevel == 0 && biohazardLevel > 0)
 		{
 			m_firstSymptomTime = deltaTime;
-			
-			GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_LIGHT_SYMPTOM_INTERVAL_MIN, biohazardLightSymptomIntervalMin);
-			GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_LIGHT_SYMPTOM_INTERVAL_MAX, biohazardLightSymptomIntervalMax);
-			m_NextSymptom1 = Math.RandomFloatInclusive( biohazardLightSymptomIntervalMin, biohazardLightSymptomIntervalMax );
 			m_Time1 = 0;
-			
-			GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_HEAVY_SYMPTOM_INTERVAL_MIN, biohazardHeavySymptomIntervalMin);
-			GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_HEAVY_SYMPTOM_INTERVAL_MAX, biohazardHeavySymptomIntervalMax);
-			m_NextSymptom2 = Math.RandomFloatInclusive( biohazardHeavySymptomIntervalMin, biohazardHeavySymptomIntervalMax );
 			m_Time2 = 0;
 		}
 		
@@ -112,30 +99,44 @@ class TerjePlayerModifierBiohazard : TerjePlayerModifierBase
 			
 			player.GetTerjeStats().SetBiohazardValue(biohazardValue);
 			
-			m_Time1 += deltaTime;
-			m_Time2 += deltaTime;
 			
 			if (biohazardLevel >= 1)
 			{
+				if (m_Time1 == 0 || m_NextSymptom1 == 0)
+				{
+					float biohazardLightSymptomIntervalMin;
+					float biohazardLightSymptomIntervalMax;
+					GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_LIGHT_SYMPTOM_INTERVAL_MIN, biohazardLightSymptomIntervalMin);
+					GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_LIGHT_SYMPTOM_INTERVAL_MAX, biohazardLightSymptomIntervalMax);
+					m_NextSymptom1 = Math.RandomFloatInclusive( biohazardLightSymptomIntervalMin, biohazardLightSymptomIntervalMax );
+				}
+				m_Time1 += deltaTime;
+				
 				if (m_Time1 >= m_NextSymptom1)
 				{
 					player.GetSymptomManager().QueueUpPrimarySymptom(SymptomIDs.SYMPTOM_COUGH);
-					
-					m_NextSymptom1 = Math.RandomFloatInclusive( biohazardLightSymptomIntervalMin, biohazardLightSymptomIntervalMax );
 					m_Time1 = 0;
 				}
 			}
 			
 			if (biohazardLevel >= 2)
 			{
+				if (m_Time2 == 0 || m_NextSymptom2 == 0)
+				{
+					float biohazardHeavySymptomIntervalMin;
+					float biohazardHeavySymptomIntervalMax;
+					GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_HEAVY_SYMPTOM_INTERVAL_MIN, biohazardHeavySymptomIntervalMin);
+					GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_HEAVY_SYMPTOM_INTERVAL_MAX, biohazardHeavySymptomIntervalMax);
+					m_NextSymptom2 = Math.RandomFloatInclusive( biohazardHeavySymptomIntervalMin, biohazardHeavySymptomIntervalMax );
+				}
+				m_Time2 += deltaTime;
+				
 				if (m_Time2 >= m_NextSymptom2 || m_firstSymptomTime > 5)
 				{
 					float biohazardVomitForceModifier = 1.0;
 					GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_VOMIT_FORCE_MODIFIER, biohazardVomitForceModifier);
 					player.CallTerjeVomitSymptom(Math.RandomIntInclusive(4, 8), biohazardVomitForceModifier);
 					m_firstSymptomTime = 0;
-					
-					m_NextSymptom2 = Math.RandomFloatInclusive( biohazardHeavySymptomIntervalMin, biohazardHeavySymptomIntervalMax );
 					m_Time2 = 0;
 				}
 			}
