@@ -99,7 +99,6 @@ class TerjePlayerModifierBiohazard : TerjePlayerModifierBase
 			
 			player.GetTerjeStats().SetBiohazardValue(biohazardValue);
 			
-			
 			if (biohazardLevel >= 1)
 			{
 				if (m_Time1 == 0 || m_NextSymptom1 == 0)
