@@ -8,6 +8,8 @@ class TerjePlayerModifierBiohazard : TerjePlayerModifierBase
 	private float m_NextSymptom1 = 0;
 	private float m_Time2;
 	private float m_NextSymptom2 = 0;
+	protected bool m_IsSuppressed1;
+	protected bool m_IsSuppressed2;
 	
 	override float GetTimeout()
 	{
@@ -108,9 +110,19 @@ class TerjePlayerModifierBiohazard : TerjePlayerModifierBase
 					GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_LIGHT_SYMPTOM_INTERVAL_MIN, biohazardLightSymptomIntervalMin);
 					GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_LIGHT_SYMPTOM_INTERVAL_MAX, biohazardLightSymptomIntervalMax);
 					m_NextSymptom1 = Math.RandomFloatInclusive( biohazardLightSymptomIntervalMin, biohazardLightSymptomIntervalMax );
+					m_IsSuppressed1 = false;
 				}
 				m_Time1 += deltaTime;
-				if (antibiohazardLevel >= biohazardLevel) m_NextSymptom1 *= 2;
+				if (antibiohazardLevel >= biohazardLevel && !m_IsSuppressed1)
+				{
+					m_NextSymptom1 *= 2;
+					m_IsSuppressed1 = true;
+				}
+				if (antibiohazardLevel < biohazardLevel && m_IsSuppressed1)
+				{
+					m_NextSymptom1 /= 2;
+					m_IsSuppressed1 = false;
+				}
 				if (m_Time1 >= m_NextSymptom1)
 				{
 					player.GetSymptomManager().QueueUpPrimarySymptom(SymptomIDs.SYMPTOM_COUGH);
@@ -127,9 +139,19 @@ class TerjePlayerModifierBiohazard : TerjePlayerModifierBase
 					GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_HEAVY_SYMPTOM_INTERVAL_MIN, biohazardHeavySymptomIntervalMin);
 					GetTerjeSettingFloat(TerjeSettingsCollection.MEDICINE_BIOHAZARD_HEAVY_SYMPTOM_INTERVAL_MAX, biohazardHeavySymptomIntervalMax);
 					m_NextSymptom2 = Math.RandomFloatInclusive( biohazardHeavySymptomIntervalMin, biohazardHeavySymptomIntervalMax );
+					m_IsSuppressed2 = false;
 				}
 				m_Time2 += deltaTime;
-				if (antibiohazardLevel >= biohazardLevel) m_NextSymptom2 *= 2;
+				if (antibiohazardLevel >= biohazardLevel && !m_IsSuppressed2)
+				{
+					m_NextSymptom2 *= 2;
+					m_IsSuppressed2 = true;
+				}
+				if (antibiohazardLevel < biohazardLevel && m_IsSuppressed2)
+				{
+					m_NextSymptom2 /= 2;
+					m_IsSuppressed2 = false;
+				}
 				if (m_Time2 >= m_NextSymptom2 || m_firstSymptomTime > 5)
 				{
 					float biohazardVomitForceModifier = 1.0;
