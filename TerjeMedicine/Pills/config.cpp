@@ -269,7 +269,7 @@ class CfgVehicles
 	class TerjePillsCharcoalTablets: TerjePills_Oval
 	{
 		scope=2;
-		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
+		displayName="$STR_CfgVehicles_CharcoalTablets0";
 		medAntipoisonLevel=1;
 		medAntipoisonTimeSec=300;
 		overdosedIncrement=0.01;
@@ -278,7 +278,7 @@ class CfgVehicles
 	class TerjePillsPainkillerTablets: TerjePills_Capsule
 	{
 		scope=2;
-		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
+		displayName="$STR_CfgVehicles_PainkillerTablets0";
 		medPainkillerLevel=1;
 		medPainkillerTimeSec=300;
 		overdosedIncrement=0.2;
@@ -287,7 +287,7 @@ class CfgVehicles
 	class TerjePillsTetracyclineAntibiotics: TerjePills_Capsule
 	{
 		scope=2;
-		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
+		displayName="$STR_CfgVehicles_TetracyclineAntibiotics0";
 		medAntibioticLevel=1;
 		medAntibioticsTimeSec=300;
 		overdosedIncrement=0.45;
