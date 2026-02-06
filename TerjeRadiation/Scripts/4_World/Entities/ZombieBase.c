@@ -59,7 +59,7 @@ modded class ZombieBase
 	{
 		super.CommandHandler(pDt, pCurrentCommandID, pCurrentCommandFinished);
 		
-		if (GetGame().IsDedicatedServer())
+		if (GetGame().IsDedicatedServer() && IsTerjeRadiationAccumulated())
 		{
 			m_terjeRadiationUpdate += pDt;
 			if (m_terjeRadiationUpdate > 30)

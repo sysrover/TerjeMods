@@ -59,7 +59,7 @@ modded class AnimalBase
 	{
 		super.CommandHandler(dt, currentCommandID, currentCommandFinished);
 		
-		if (GetGame().IsDedicatedServer())
+		if (GetGame().IsDedicatedServer() && IsTerjeRadiationAccumulated())
 		{
 			m_terjeRadiationUpdate += dt;
 			if (m_terjeRadiationUpdate > 30)
