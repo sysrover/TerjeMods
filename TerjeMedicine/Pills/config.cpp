@@ -206,45 +206,29 @@ class CfgVehicles
 	{
 		scope=2;
 		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
-		varQuantityInit=10;
-		varQuantityMin=0;
-		varQuantityMax=10;
 		medAntipoisonLevel=1;
 		medAntipoisonTimeSec=300;
 		overdosedIncrement=0.01;
-		medicalItem=1;
-		medSkillExpAddToSelf=5;
-		medicalPillsCategory=1;
+		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\data\oval_11_co.paa"};
 	};
 	class TerjePillsPainkillerTablets: TerjePills_Capsule
 	{
 		scope=2;
 		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
-		varQuantityInit=10;
-		varQuantityMin=0;
-		varQuantityMax=10;
 		medPainkillerLevel=1;
 		medPainkillerTimeSec=300;
-		medSkillExpAddToSelf=10;
 		overdosedIncrement=0.2;
-		medicalItem=1;
-		medicalPillsCategory=1;
+		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\data\capsule_2_co.paa"};
 	};
 	class TerjePillsTetracyclineAntibiotics: TerjePills_Capsule
 	{
 		scope=2;
 		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
-		varQuantityInit=10;
-		varQuantityMin=0;
-		varQuantityMax=10;
 		medAntibioticLevel=1;
 		medAntibioticsTimeSec=300;
-		medSkillExpAddToSelf=10;
 		overdosedIncrement=0.45;
-		medicalItem=1;
-		medicalPillsCategory=1;
+		hiddenSelectionsTextures[]={"TerjeMedicine\Pills\data\capsule_3_co.paa"};
 	};
-	
 	class TerjePillsMagnesiumSulfate: TerjePills_Capsule
 	{
 		scope=2;
