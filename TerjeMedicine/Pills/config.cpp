@@ -155,9 +155,6 @@ class CfgVehicles
 	class CharcoalTablets: Edible_Base
 	{
 		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
-		varQuantityInit=10;
-		varQuantityMin=0;
-		varQuantityMax=10;
 		medAntipoisonLevel=1;
 		medAntipoisonTimeSec=300;
 		overdosedIncrement=0.01;
@@ -178,9 +175,6 @@ class CfgVehicles
 	class PainkillerTablets: Edible_Base
 	{
 		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
-		varQuantityInit=10;
-		varQuantityMin=0;
-		varQuantityMax=10;
 		medPainkillerLevel=1;
 		medPainkillerTimeSec=300;
 		medSkillExpAddToSelf=10;
@@ -191,9 +185,6 @@ class CfgVehicles
 	class TetracyclineAntibiotics: Edible_Base
 	{
 		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
-		varQuantityInit=10;
-		varQuantityMin=0;
-		varQuantityMax=10;
 		medAntibioticLevel=1;
 		medAntibioticsTimeSec=300;
 		medSkillExpAddToSelf=10;
