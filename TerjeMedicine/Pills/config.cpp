@@ -204,6 +204,7 @@ class CfgVehicles
 	
 	class TerjePillsCharcoalTablets: TerjePills_Oval
 	{
+		scope=2;
 		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
 		varQuantityInit=10;
 		varQuantityMin=0;
@@ -217,6 +218,7 @@ class CfgVehicles
 	};
 	class TerjePillsPainkillerTablets: TerjePills_Capsule
 	{
+		scope=2;
 		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
 		varQuantityInit=10;
 		varQuantityMin=0;
@@ -230,6 +232,7 @@ class CfgVehicles
 	};
 	class TerjePillsTetracyclineAntibiotics: TerjePills_Capsule
 	{
+		scope=2;
 		descriptionShort="#STR_TERJEMED_TABLETS_DESC";
 		varQuantityInit=10;
 		varQuantityMin=0;
