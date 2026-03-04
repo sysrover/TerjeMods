@@ -18,6 +18,7 @@ modded class PlayerBase
 	override void OnTerjePlayerRespawned()
 	{
 		super.OnTerjePlayerRespawned();
+		ApplyTerjePersistentBeardOnSpawn();
 		
 		if (GetIdentity() != null && GetTerjeProfile() != null)
 		{
@@ -50,6 +51,7 @@ modded class PlayerBase
 	override void OnTerjePlayerLoaded()
 	{
 		super.OnTerjePlayerLoaded();
+		ApplyTerjePersistentBeardOnSpawn();
 		
 		if (GetIdentity() != null)
 		{
@@ -132,6 +134,7 @@ modded class PlayerBase
 			if (GetTerjeProfile() != null)
 			{
 				GetTerjeProfile().SetRespawnLastDeathPoint(GetWorldPosition());
+				GetTerjeProfile().SetPersistentBeardLevelDeath(GetLifeSpanState());
 			}
 			
 			if ((GetTerjeProfile() != null) && (GetTerjeSouls() != null) && (GetTerjeSouls().IsEnabled()))
@@ -282,5 +285,31 @@ modded class PlayerBase
 	void CreateTerjePassportInInventory()
 	{
 		CreateInInventory("TerjePassport");
+	}
+
+	protected void ApplyTerjePersistentBeardOnSpawn()
+	{
+		if (!GetGame() || !GetGame().IsDedicatedServer()) return;
+		if (!GetTerjeSettingBool(TerjeSettingsCollection.STARTSCREEN_PBEARD_ENABLED)) return;
+
+		TerjePlayerProfile profile = GetTerjeProfile();
+		if (profile == null) return;
+
+		PluginLifespan lifespan = PluginLifespan.Cast(GetPlugin(PluginLifespan));
+		if (lifespan == null) return;
+
+		int selectedLevel = TerjeMathHelper.ClampInt(profile.GetPersistentBeardLevelSelected(), 0, 3);
+		int beardLevel = selectedLevel;
+		if (GetTerjeSettingBool(TerjeSettingsCollection.STARTSCREEN_PBEARD_ALLOWSHAVE))
+		{
+			int deathLevel = profile.GetPersistentBeardLevelDeath();
+			if (deathLevel >= 0)
+			{
+				beardLevel = TerjeMathHelper.ClampInt(deathLevel, 0, selectedLevel);
+			}
+		}
+
+		lifespan.SetPersistentBeardLevel(this, beardLevel);
+		profile.SetPersistentBeardLevelDeath(-1);
 	}
 }
