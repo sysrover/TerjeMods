@@ -1,4 +1,6 @@
 "Language","original","english","czech","german","russian","polish","hungarian","italian","spanish","french","chinese","japanese","portuguese","chinesesimp"
+"STR_TERJECORE_EFFECT_LEVEL_0","LEVEL","LEVEL","ÚROVEŇ","STUFE","РIВЕНЬ","POZIOM","","LIVELLO","NIVEL","NIVEAU","","レベル","NÍVEL","",
+"STR_TERJECORE_EFFECT_LEVEL_1","","","","","","",". SZINT","","","","級","","","级",
 "STR_TERJECORE_EFFECT_HEALTH","HEALTH","HEALTH","ZDRAVÍ","GESUNDHEIT","ЗДОРОВ'Я","ZDROWIE","EGÉSZSÉG","SALUTE","SALUD","SANTÉ","健康","健康","SAÚDE","健康"
 "STR_TERJECORE_EFFECT_BLOOD","BLOOD","BLOOD","KREV","BLUT","КРОВ","KREW","VÉR","SANGUE","SANGRE","SANG","血液","血液","SANGUE","血液"
 "STR_TERJECORE_EFFECT_SHOCK","SHOCK","SHOCK","ŠOK","SCHOCK","ШОК","SZOK","SZOK","SHOCK","CHOQUE","CHOC","休克","ショック","CHOQUE","休克"
@@ -30,3 +32,6 @@
 "STR_TERJECORE_CRAFT_BLOCK","Failed to craft","Failed to craft","Nelze vytvořit","Konnte nicht erstellt werden","Не вдалося створити","Nie można utworzyć","Nem sikerült létrehozni","Impossibile creare","No se pudo crear","Impossible de créer","创建失败","作成に失敗しました","Não foi possível criar","创建失败"
 "STR_TERJECORE_EFFECT_POSITIVE","TREATMENT:","TREATMENT:","LÉČBA:","BEHANDLUNG:","ЛIКУВАННЯ:","LECZENIE:","KEZELÉS:","TRATTAMENTO:","TRATAMIENTO:","TRAITEMENT:","治療：","処理：","TRATAMENTO:","治疗："
 "STR_TERJECORE_EFFECT_NEGATIVE","SIDE EFFECTS:","SIDE EFFECTS:","NEŽÁDOUCÍ ÚČINKY:","NEBENWIRKUNGEN:","ПОБIЧНІ ЕФЕКТИ:","SKUTKI UBOCZNE:","MELLÉKHATÁSOK:","EFFETTI COLLATERALI:","EFECTOS SECUNDARIOS:","EFFETS SECONDAIRES :","副作用：","副作用:","EFEITOS COLATERAIS:","副作用："
+
+STR_TERJECORE_EFFECT_POSITIVE,TREATMENT:,TREATMENT:,LÉČBA:,BEHANDLUNG:,ЛIКУВАННЯI:,LECZENIE:,KEZELÉS:,TRATTAMENTO:,TRATAMIENTO:,TRAITEMENT:,治療：,処理：,TRATAMENTO:,治疗：
+STR_TERJECORE_EFFECT_NEGATIVE,SIDE EFFECTS:,SIDE EFFECTS:,NEŽÁDOUCÍ ÚČINKY:,NEBENWIRKUNGEN:,ПОБIЧНI ЕФЕКТИ:,SKUTKI UBOCZNE:,MELLÉKHATÁSOK:,EFFETTI COLLATERALI:,EFECTOS SECUNDARIOS:,EFFETS SECONDAIRES :,副作用：,副作用:,EFEITOS COLATERAIS:,副作用：
