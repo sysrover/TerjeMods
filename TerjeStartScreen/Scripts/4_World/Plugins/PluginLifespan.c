@@ -97,6 +97,14 @@ modded class PluginLifespan
 
 	override void UpdateLifespan(PlayerBase player, bool force_update = false)
 	{
+		int previousLevel = -1;
+		int previousLastShavedSeconds = -1;
+		if (player != null)
+		{
+			previousLevel = player.GetLifeSpanState();
+			previousLastShavedSeconds = player.GetLastShavedSeconds();
+		}
+
 		super.UpdateLifespan(player, force_update);
 		if (!GetGame() || !GetGame().IsDedicatedServer()) return;
 		if (!GetTerjeSettingBool(TerjeSettingsCollection.STARTSCREEN_PBEARD_ENABLED)) return;
@@ -115,6 +123,9 @@ modded class PluginLifespan
 
 		if (allowShave)
 		{
+			int syncedAllowShaveLevel = player.GetLifeSpanState();
+			int syncedAllowShaveLastShavedSeconds = player.GetLastShavedSeconds();
+			if ((previousLevel != syncedAllowShaveLevel) || (previousLastShavedSeconds != syncedAllowShaveLastShavedSeconds)) player.SyncTerjePersistentBeardVisual();
 			return;
 		}
 
@@ -123,5 +134,9 @@ modded class PluginLifespan
 		{
 			SetPersistentBeardLevel(player, lockedLevel);
 		}
+
+		int syncedLevel = player.GetLifeSpanState();
+		int syncedLastShavedSeconds = player.GetLastShavedSeconds();
+		if ((previousLevel != syncedLevel) || (previousLastShavedSeconds != syncedLastShavedSeconds)) player.SyncTerjePersistentBeardVisual();
 	}
 }

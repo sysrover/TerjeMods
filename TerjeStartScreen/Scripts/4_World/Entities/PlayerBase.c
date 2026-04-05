@@ -188,12 +188,7 @@ modded class PlayerBase
 				if (!ctx.Read(payload2))
 					return;
 
-				PluginLifespan lifespan = PluginLifespan.Cast(GetPlugin(PluginLifespan));
-				if (lifespan == null)
-					return;
-
-				SetLastShavedSeconds(payload2.param2);
-				lifespan.ApplyTerjePersistentBeardVisual(this, payload2.param1);
+				ApplyTerjePersistentBeardVisualDeferred(payload2.param1, payload2.param2);
 			}
 		}
 	}
@@ -300,6 +295,43 @@ modded class PlayerBase
 		CreateInInventory("TerjePassport");
 	}
 
+	void SyncTerjePersistentBeardVisual()
+	{
+		if (!g_Game || !g_Game.IsDedicatedServer()) return;
+		if (!GetTerjeSettingBool(TerjeSettingsCollection.STARTSCREEN_PBEARD_ENABLED)) return;
+
+		Param2<int, int> beardPayload = new Param2<int, int>(GetLifeSpanState(), GetLastShavedSeconds());
+		TerjeSendToAll("startscreen.pbeard.sync", beardPayload);
+	}
+
+	protected bool CanApplyTerjePersistentBeardVisualNow()
+	{
+		if (!GetGame()) return false;
+		if (!GetInventory()) return false;
+		if (m_CharactersHead == null) return false;
+
+		int headSlotId = InventorySlots.GetSlotIdFromString("Head");
+		EntityAI playerHead = GetInventory().FindPlaceholderForSlot(headSlotId);
+		if (playerHead == null) return false;
+
+		return true;
+	}
+
+	protected void ApplyTerjePersistentBeardVisualDeferred(int level, int lastShavedSeconds, int retryCount = 0)
+	{
+		PluginLifespan lifespan = PluginLifespan.Cast(GetPlugin(PluginLifespan));
+		if (lifespan == null) return;
+
+		if (!CanApplyTerjePersistentBeardVisualNow())
+		{
+			if (g_Game && (retryCount < 10)) g_Game.GetCallQueue(CALL_CATEGORY_SYSTEM).CallLater(ApplyTerjePersistentBeardVisualDeferred, 250, false, level, lastShavedSeconds, retryCount + 1);
+			return;
+		}
+
+		SetLastShavedSeconds(lastShavedSeconds);
+		lifespan.ApplyTerjePersistentBeardVisual(this, level);
+	}
+
 	protected void ApplyTerjePersistentBeardOnSpawn(bool retryIfHeadMissing = false, int retryCount = 0)
 	{
 		if (!GetGame() || !GetGame().IsDedicatedServer()) return;
@@ -334,11 +366,7 @@ modded class PlayerBase
 		}
 
 		lifespan.SetPersistentBeardState(this, beardLevel, allowShave);
-		if (GetIdentity() != null)
-		{
-			Param2<int, int> beardPayload = new Param2<int, int>(beardLevel, GetLastShavedSeconds());
-			TerjeSendToClient("startscreen.pbeard.sync", GetIdentity(), beardPayload);
-		}
+		SyncTerjePersistentBeardVisual();
 		profile.SetPersistentBeardLevelDeath(-1);
 	}
 }
