@@ -24,6 +24,14 @@ modded class ActionFishingNew
 			super.TrySpawnCatch(action_data);
 		}
 		
+		if (action_data.m_Player && result)
+		{
+			if (TerjeProcessingSpawnCatch(action_data, result))
+			{
+				vector pos = action_data.m_Player.GetPosition();
+				EntityAI extra = EntityAI.Cast(g_Game.CreateObjectEx(result.GetType(), pos, ECE_PLACE_ON_SURFACE));
+			}
+		}
 		return result;
 	}
 	
