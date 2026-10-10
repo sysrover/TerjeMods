@@ -105,38 +105,39 @@ modded class PluginLifespan
 			previousLastShavedSeconds = player.GetLastShavedSeconds();
 		}
 
-		super.UpdateLifespan(player, force_update);
-		if (!GetGame() || !GetGame().IsDedicatedServer()) return;
-		if (!GetTerjeSettingBool(TerjeSettingsCollection.STARTSCREEN_PBEARD_ENABLED)) return;
-		if (player == null || player.GetTerjeProfile() == null) return;
-
-		TerjePlayerProfile profile = player.GetTerjeProfile();
-		bool allowShave = GetTerjeSettingBool(TerjeSettingsCollection.STARTSCREEN_PBEARD_ALLOWSHAVE);
-
-		int maxLevel = GetTerjePersistentBeardMaxLevel(player);
-		int currentLevel = TerjeMathHelper.ClampInt(player.GetLifeSpanState(), 0, maxLevel);
-		if (player.GetLifeSpanState() > maxLevel)
+		if (!GetGame() || !GetGame().IsDedicatedServer())
 		{
-			SetPersistentBeardLevel(player, maxLevel);
-			currentLevel = maxLevel;
+			super.UpdateLifespan(player, force_update);
+			return;
 		}
-
-		if (allowShave)
+		
+		if (!GetTerjeSettingBool(TerjeSettingsCollection.STARTSCREEN_PBEARD_ENABLED) || player == null || player.GetTerjeProfile() == null)
 		{
-			int syncedAllowShaveLevel = player.GetLifeSpanState();
-			int syncedAllowShaveLastShavedSeconds = player.GetLastShavedSeconds();
-			if ((previousLevel != syncedAllowShaveLevel) || (previousLastShavedSeconds != syncedAllowShaveLastShavedSeconds)) player.SyncTerjePersistentBeardVisual();
+			super.UpdateLifespan(player, force_update);
 			return;
 		}
 
-		int lockedLevel = TerjeMathHelper.ClampInt(profile.GetPersistentBeardLevelSelected(), 0, maxLevel);
-		if (currentLevel != lockedLevel)
+		TerjePlayerProfile profile = player.GetTerjeProfile();
+		bool allowShave = GetTerjeSettingBool(TerjeSettingsCollection.STARTSCREEN_PBEARD_ALLOWSHAVE);
+		if (!allowShave)
 		{
+			int lockedMaxLevel = GetTerjePersistentBeardMaxLevel(player);
+			int lockedLevel = TerjeMathHelper.ClampInt(profile.GetPersistentBeardLevelSelected(), 0, lockedMaxLevel);
 			SetPersistentBeardLevel(player, lockedLevel);
+			player.SyncTerjePersistentBeardVisual();
+			return;
+		}
+		
+		super.UpdateLifespan(player, force_update);
+
+		int maxLevel = GetTerjePersistentBeardMaxLevel(player);
+		if (player.GetLifeSpanState() > maxLevel)
+		{
+			SetPersistentBeardLevel(player, maxLevel);
 		}
 
-		int syncedLevel = player.GetLifeSpanState();
-		int syncedLastShavedSeconds = player.GetLastShavedSeconds();
-		if ((previousLevel != syncedLevel) || (previousLastShavedSeconds != syncedLastShavedSeconds)) player.SyncTerjePersistentBeardVisual();
+		int syncedAllowShaveLevel = player.GetLifeSpanState();
+		int syncedAllowShaveLastShavedSeconds = player.GetLastShavedSeconds();
+		if ((previousLevel != syncedAllowShaveLevel) || (previousLastShavedSeconds != syncedAllowShaveLastShavedSeconds)) player.SyncTerjePersistentBeardVisual();
 	}
 }

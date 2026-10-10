@@ -872,34 +872,66 @@ class PluginTerjeStartScreen : PluginBase
 	
 	private void OnTerjeStartScreenLoadoutEquip(ParamsReadContext ctx, PlayerIdentity sender)
 	{
+		string senderId = "NULL";
+		if (sender)
+		{
+			senderId = sender.GetId();
+		}
+		
+		Print("TerjeStartScreenLoadoutEquip: request received from " + senderId);
+		
 		PlayerBase player = FindPlayerByIdentity(sender);
 		if (!player)
+		{
+			Print("TerjeStartScreenLoadoutEquip: return - player not found for " + senderId);
 			return;
+		}
 		
 		if (!player.m_terjeStartScreenParams)
+		{
+			Print("TerjeStartScreenLoadoutEquip: return - m_terjeStartScreenParams is null for " + senderId);
 			return;
+		}
 		
 		TerjeStartScreenContextLoadout loadoutContext = TerjeStartScreenContextLoadout.Cast(player.m_terjeStartScreenParams.GetActualContext());
 		if (!loadoutContext)
+		{
+			Print("TerjeStartScreenLoadoutEquip: return - actual context is not loadout for " + senderId);
 			return;
+		}
 		
 		if (!loadoutContext.m_inputLoadouts)
+		{
+			Print("TerjeStartScreenLoadoutEquip: return - m_inputLoadouts is null for " + senderId);
 			return;
+		}
 		
 		TerjeXmlObject clientLoadout();
 		if (!clientLoadout.Unbinarize(ctx))
+		{
+			Print("TerjeStartScreenLoadoutEquip: return - client loadout unbinarize failed for " + senderId);
 			return;
+		}
 		
 		string loadoutId;
 		if (!clientLoadout.FindAttribute("id", loadoutId))
+		{
+			Print("TerjeStartScreenLoadoutEquip: return - client loadout id missing for " + senderId);
 			return;
+		}
+		
+		Print("TerjeStartScreenLoadoutEquip: client selected loadout '" + loadoutId + "' for " + senderId);
 		
 		TerjeXmlObject serverLoadout = loadoutContext.m_inputLoadouts.GetChildByAttrPair("Loadout", "id", loadoutId);
 		if (!serverLoadout)
+		{
+			Print("TerjeStartScreenLoadoutEquip: return - server loadout not found for id '" + loadoutId + "'");
 			return;
+		}
 		
 		if (!CompareClientAndServerLoadoutObjects(clientLoadout, serverLoadout))
 		{
+			Print("TerjeStartScreenLoadoutEquip: return - client/server loadout mismatch for " + senderId);
 			TerjeLog_Warning("Server and client loadouts missmatch. Possible hacker: " + sender.GetId());
 			GetGame().DisconnectPlayer(sender, sender.GetId());
 			return;
@@ -907,12 +939,19 @@ class PluginTerjeStartScreen : PluginBase
 		
 		TerjeXmlObject clientItems = clientLoadout.GetChildByNodeName("Items");
 		if (!clientItems)
+		{
+			Print("TerjeStartScreenLoadoutEquip: return - client Items node missing for loadout '" + loadoutId + "'");
 			return;
+		}
 		
 		TerjeXmlObject serverItems = serverLoadout.GetChildByNodeName("Items");
 		if (!serverItems)
+		{
+			Print("TerjeStartScreenLoadoutEquip: return - server Items node missing for loadout '" + loadoutId + "'");
 			return;
+		}
 		
+		Print("TerjeStartScreenLoadoutEquip: items accepted for loadout '" + loadoutId + "', starting equip for " + senderId);
 		clientItems.DeepCopy(serverItems, true, false);
 		StartLoadoutItemsEquip(player, sender, serverItems);
 	}

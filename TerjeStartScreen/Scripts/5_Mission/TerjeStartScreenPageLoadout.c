@@ -102,6 +102,7 @@ class TerjeStartScreenPageLoadout : TerjeStartScreenPageBase
 		{
 			if (m_requestPended && !m_processing)
 			{
+				Print("TerjeStartScreenPageLoadout: pending loadout sync, starting processing");
 				m_requestPended = false;
 				m_processing = true;
 				SynchLoadoutWithServer(m_selectedLoadoutObject);
@@ -296,6 +297,7 @@ class TerjeStartScreenPageLoadout : TerjeStartScreenPageBase
 	
 	protected void OnTerjeStartScreenEquipCallback(ParamsReadContext ctx, PlayerIdentity sender)
 	{
+		Print("TerjeStartScreenPageLoadout: startscreen.loadout.ready received");
 		m_processing = false;
 		
 		if (m_playerPreview != null)
@@ -306,11 +308,32 @@ class TerjeStartScreenPageLoadout : TerjeStartScreenPageBase
 	
 	protected void SynchLoadoutWithServer(TerjeXmlObject loadout)
 	{
+		if (!loadout)
+		{
+			Print("TerjeStartScreenPageLoadout: SynchLoadoutWithServer return - loadout is null");
+			return;
+		}
+		
+		string loadoutId;
+		if (loadout.FindAttribute("id", loadoutId))
+		{
+			Print("TerjeStartScreenPageLoadout: sending startscreen.loadout.equip for loadout '" + loadoutId + "'");
+		}
+		else
+		{
+			Print("TerjeStartScreenPageLoadout: sending startscreen.loadout.equip for loadout without id");
+		}
+		
 		TerjeStreamRpc ctx;
 		GetTerjeRPC().StreamToServer("startscreen.loadout.equip", ctx);
 		if (loadout.Binarize(ctx))
 		{
+			Print("TerjeStartScreenPageLoadout: loadout binarize ok, flushing RPC");
 			ctx.Flush();
+		}
+		else
+		{
+			Print("TerjeStartScreenPageLoadout: loadout binarize failed, RPC not flushed");
 		}
 	}
 }
