@@ -5,57 +5,42 @@ modded class JMPlayerForm
 	private UIActionSlider m_TerjeUnused;
 	private Widget m_TerjePerkTooltipWidget;
 	private ref map<string, Widget> m_TerjePerkWidgets;
-	
-	private UIActionSelectBox m_TerjeTabSelector;
-	private ref array<string> m_TerjeTabLabels;
 	private Widget m_TerjeStatsPanel;
 	private Widget m_TerjePerksPanel;
 	
 	private ref map<string, UIActionSlider> m_TerjeControls;
 	private ref set<string> m_TerjeUpdatedControls;
 
-	override void OnClientPermissionsUpdated()
+	override void OnInit()
 	{
-		super.OnClientPermissionsUpdated();
-		
-		if (m_TerjeControls)
-		{
-			foreach (string id, UIActionSlider control : m_TerjeControls)
-			{
-				UpdatePermission( control, "Admin.Player.Set.Health" );
-			}
-		}
-	}
-	
-	protected override Widget InitActionWidgetsStats( Widget actionsParent )
-	{
-		Widget result = super.InitActionWidgetsStats(actionsParent);
+		// COT creates tabs lazily, but calls RefreshStats during its own OnInit.
+		m_TerjeControls = new map<string, UIActionSlider>;
+		m_TerjeUpdatedControls = new set<string>;
+		super.OnInit();
 
+		AddTab("Terje", JMConstants.Lucide("activity"), "TerjeBuildStatsTab");
 #ifdef TERJE_SKILLS_MOD
-		// Initialize tab selector with perks tab
-		m_TerjeTabLabels = { "Terje Stats", "Terje Perks" };
+		AddTab("Perks", JMConstants.Lucide("star"), "TerjeBuildPerksTab");
 #endif
+	}
 
-#ifndef TERJE_SKILLS_MOD
-		// Initialize tab selector without perks tab
-		m_TerjeTabLabels = { "Terje Stats" };
-#endif
+	void TerjeBuildStatsTab(Widget uam_ParentPanel)
+	{
+		if (!uam_ParentPanel)
+			return;
 
-		m_TerjeTabSelector = UIActionManager.CreateSelectionBox( result, "", m_TerjeTabLabels, this, "OnTerjeTabChanged" );
-		m_TerjeTabSelector.SetSelectorWidth(1.0);
-		m_TerjeTabSelector.SetSelection(0, false);
-
-		m_TerjeStatsPanel = UIActionManager.CreateGridSpacer( result, 4, 2 );
+		m_TerjeStatsPanel = UIActionManager.CreateGridSpacer(uam_ParentPanel, 20, 2);
+		if (!m_TerjeStatsPanel)
+			return;
 		Widget actions = m_TerjeStatsPanel;
 
 		array<ref TerjeAdmintoolSupport_PlayerStat> registeredStats = new array<ref TerjeAdmintoolSupport_PlayerStat>;
 		GetTerjeAdmintoolSupport().GetPlayerStats(registeredStats);
-		m_TerjeControls = new map<string, UIActionSlider>;
-		m_TerjeUpdatedControls = new set<string>;
 		foreach (ref TerjeAdmintoolSupport_PlayerStat stat : registeredStats)
 		{
 			m_TerjeControls[stat.GetId()] = UIActionManager.CreateSlider( actions, stat.GetName(), stat.GetMin(), stat.GetMax(), this, "Click_SetTerjeStat" );
 			m_TerjeControls[stat.GetId()].SetSliderWidth(0.5);
+			BindPermission(m_TerjeControls[stat.GetId()], "Admin.Player.Set.Health");
 		}
 		if (m_TerjeControls.Count() % 2 != 0)
 		{
@@ -66,15 +51,25 @@ modded class JMPlayerForm
 		m_TerjeApplyStats = UIActionManager.CreateButton( actions, "#STR_COT_PLAYER_MODULE_RIGHT_PLAYER_VARIABLES_APPLY", this, "Click_ApplyStats" );
 		m_TerjeRefreshStats = UIActionManager.CreateButton( actions, "#STR_COT_PLAYER_MODULE_RIGHT_PLAYER_VARIABLES_REFRESH", this, "Click_RefreshTerjeStats" );
 
+		BindPermission(m_TerjeApplyStats, "Admin.Player.Set.Health");
+		RefreshStats(true);
+	}
+
 #ifdef TERJE_SKILLS_MOD
-		// Initialize perks panel
+	void TerjeBuildPerksTab(Widget uam_ParentPanel)
+	{
+		if (!uam_ParentPanel)
+			return;
+
 		m_TerjePerkWidgets = new map<string, Widget>;
 		array<ref TerjeSkillCfg> skills = new array<ref TerjeSkillCfg>;
 		GetTerjeSkillsRegistry().GetSkills(skills);
 		const int MAX_PERKS_PER_ROW = 11;
 		const string TERJE_GRID_LAYOUT = "TerjeCompatibilityCOT/GUI/Layouts/GridSpacer11.layout";
 
-		m_TerjePerksPanel = g_Game.GetWorkspace().CreateWidgets("TerjeCompatibilityCOT/GUI/Layouts/SkillsList.layout", result);
+m_TerjePerksPanel = g_Game.GetWorkspace().CreateWidgets("TerjeCompatibilityCOT/GUI/Layouts/SkillsList.layout", result);
+		if (!m_TerjePerksPanel)
+			return;
 
 		foreach (ref TerjeSkillCfg skillCfg : skills)
 		{
@@ -129,15 +124,13 @@ modded class JMPlayerForm
 		}
 
 		UpdateTerjePerkWidgets();
-		if (m_TerjePerksPanel)
+if (m_TerjePerksPanel)
 		{
 			m_TerjePerksPanel.Show(false);
 		}
 #endif
 		return result;
 	}
-
-#ifdef TERJE_SKILLS_MOD
 
 	// Quick perk tooltip handlers
 	bool OnQuickPerkEnter(Widget w, int x, int y)
@@ -167,14 +160,16 @@ modded class JMPlayerForm
 		int perkActiveLevel = 0;
 		bool canBeUpgraded = false;
 
-		PlayerBase player = null;
 		if (m_SelectedInstance)
-			player = PlayerBase.Cast(m_SelectedInstance.PlayerObject);
-		if (!player)
-			player = PlayerBase.Cast(g_Game.GetPlayer());
-		if (player && player.GetTerjeSkills())
+if (m_SelectedInstance)
 		{
-			player.GetTerjeSkills().GetPerkStatus(skillCfg.GetId(), perkCfg.GetId(), perkLevel, perkActiveLevel, canBeUpgraded);
+			player = PlayerBase.Cast(m_SelectedInstance.PlayerObject);
+			if (!player)
+				player = PlayerBase.Cast(g_Game.GetPlayer());
+			if (player && player.GetTerjeSkills())
+			{
+				player.GetTerjeSkills().GetPerkStatus(skillCfg.GetId(), perkCfg.GetId(), perkLevel, perkActiveLevel, canBeUpgraded);
+			}
 		}
 
 		// Remove any prior tooltip instance.
@@ -251,7 +246,10 @@ modded class JMPlayerForm
 				player = PlayerBase.Cast(m_SelectedInstance.PlayerObject);
 
 			if (!player)
+if (!player)
 				player = PlayerBase.Cast(g_Game.GetPlayer());
+			if (!player)
+				return;
 				
 			if (button == MouseState.LEFT)
 				player.TerjeRPCSingleParam(TerjeSkillsConstants.TRPC_PLAYER_PERK_APPLY, new Param2<string, string>(skillId, perkId), true, player.GetIdentity());
@@ -352,23 +350,32 @@ modded class JMPlayerForm
 	}
 #endif
 
-	void OnTerjeTabChanged( UIEvent eid, UIActionBase action )
+	protected override void OnTabUnfocus(int tab)
 	{
-		if ( eid != UIEvent.CHANGE )
-			return;
-
-		int selection = m_TerjeTabSelector.GetSelection();
-		if (m_TerjeStatsPanel)
-			m_TerjeStatsPanel.Show(selection == 0);
-		if (m_TerjePerksPanel)
-			m_TerjePerksPanel.Show(selection == 1);
+		super.OnTabUnfocus(tab);
+		TerjeHidePerkTooltip();
 	}
-	
+
+	override void OnHide()
+	{
+		TerjeHidePerkTooltip();
+		super.OnHide();
+	}
+
+	private void TerjeHidePerkTooltip()
+	{
+		if (m_TerjePerkTooltipWidget)
+		{
+			m_TerjePerkTooltipWidget.Unlink();
+			m_TerjePerkTooltipWidget = null;
+		}
+	}
+
 	override void RefreshStats(bool force = false)
 	{
 		super.RefreshStats(force);
 		
-		if ( !m_SelectedInstance )
+		if (!m_SelectedInstance || !m_TerjeControls || !m_TerjeUpdatedControls)
 			return;
 		
 		if (g_Game.IsClient() && m_SelectedInstance.GetDataLastUpdatedTime() < m_LastChangeTime)
