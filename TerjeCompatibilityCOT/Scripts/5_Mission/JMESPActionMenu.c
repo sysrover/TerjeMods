@@ -12,7 +12,7 @@ modded class JMESPActionMenu
 			return;
 
 		float uam_Radiation = GetTerjeScriptableAreas().GetTerjeRadiationFromEntity(uam_TargetEntity);
-		m_Menu.AddItem("terje:radiation", "Radiation: " + FloatToString(uam_Radiation));
+		m_Menu.AddItem("terje:radiation", "Radiation: " + uam_Radiation.ToString());
 		m_Menu.SetItemEnabled("terje:radiation", false);
 	}
 }
