@@ -27,7 +27,7 @@ modded class JMPlayerForm
 		}
 	}
 	
-	override private Widget InitActionWidgetsStats( Widget actionsParent )
+	protected override Widget InitActionWidgetsStats( Widget actionsParent )
 	{
 		Widget result = super.InitActionWidgetsStats(actionsParent);
 
@@ -64,7 +64,7 @@ modded class JMPlayerForm
 			m_TerjeUnused.SetEnabled(false);
 		}
 		m_TerjeApplyStats = UIActionManager.CreateButton( actions, "#STR_COT_PLAYER_MODULE_RIGHT_PLAYER_VARIABLES_APPLY", this, "Click_ApplyStats" );
-		m_TerjeRefreshStats = UIActionManager.CreateButton( actions, "#STR_COT_PLAYER_MODULE_RIGHT_PLAYER_VARIABLES_REFRESH", this, "Click_RefreshStats" );
+		m_TerjeRefreshStats = UIActionManager.CreateButton( actions, "#STR_COT_PLAYER_MODULE_RIGHT_PLAYER_VARIABLES_REFRESH", this, "Click_RefreshTerjeStats" );
 
 #ifdef TERJE_SKILLS_MOD
 		// Initialize perks panel
@@ -371,7 +371,7 @@ modded class JMPlayerForm
 		if ( !m_SelectedInstance )
 			return;
 		
-		if (m_SelectedInstance.GetDataLastUpdatedTime() < m_LastChangeTime)
+		if (g_Game.IsClient() && m_SelectedInstance.GetDataLastUpdatedTime() < m_LastChangeTime)
 			return;
 		
 		if (force)
@@ -394,16 +394,26 @@ modded class JMPlayerForm
 
 	}
 	
-	override void Click_ApplyStats( UIEvent eid, UIActionBase action )
+	void Click_RefreshTerjeStats( UIEvent eid, UIActionBase action )
 	{
-		super.Click_ApplyStats(eid, action);
-		
-		foreach (string id : m_TerjeUpdatedControls)
+		if (eid != UIEvent.CLICK)
+			return;
+
+		RefreshStats(true);
+	}
+
+	// Called with the same confirmed targets as COT's vanilla stats.
+	void TerjeApplyStats(TStringArray uam_Guids)
+	{
+		if (!m_TerjeUpdatedControls || !m_TerjeControls || !m_Module || !uam_Guids)
+			return;
+
+		foreach (string uam_StatId : m_TerjeUpdatedControls)
 		{
-			UIActionSlider control;
-			if (m_TerjeControls.Find(id, control) && control)
+			UIActionSlider uam_Control;
+			if (m_TerjeControls.Find(uam_StatId, uam_Control) && uam_Control)
 			{
-				m_Module.SetTerjeValue( id, control.GetCurrent(), JM_GetSelected().GetPlayers() );
+				m_Module.SetTerjeValue(uam_StatId, uam_Control.GetCurrent(), uam_Guids);
 			}
 		}
 		
