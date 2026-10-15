@@ -72,39 +72,38 @@ modded class JMPlayerInstance
 		}
 	}
 
-	override void OnRecieve( ParamsReadContext ctx )
+	override bool OnReceive( ParamsReadContext ctx )
 	{
-		super.OnRecieve(ctx);
+		if (!super.OnReceive(ctx))
+			return false;
 		
-		int count;
-		ctx.Read( count );
-		for (int i = 0; i < count; i++)
+		int uam_StatCount;
+		if (!ctx.Read(uam_StatCount))
+			return false;
+		for (int uam_StatIndex = 0; uam_StatIndex < uam_StatCount; uam_StatIndex++)
 		{
-			string id;
-			float value;
-			ctx.Read( id );
-			ctx.Read( value );
-			m_TerjeStats[id] = value;
+			string uam_StatId;
+			float uam_StatValue;
+			if (!ctx.Read(uam_StatId) || !ctx.Read(uam_StatValue))
+				return false;
+			m_TerjeStats[uam_StatId] = uam_StatValue;
 		}
 
-		int perkCount;
-		ctx.Read(perkCount);
+		int uam_PerkCount;
+		if (!ctx.Read(uam_PerkCount))
+			return false;
 		m_TerjePerkStatus.Clear();
-		for (int j = 0; j < perkCount; j++)
+		for (int uam_PerkIndex = 0; uam_PerkIndex < uam_PerkCount; uam_PerkIndex++)
 		{
-			string perkId;
-			int perkLevel;
-			int perkActiveLevel;
-			int canUpgradeInt;
-			ctx.Read(perkId);
-			ctx.Read(perkLevel);
-			ctx.Read(perkActiveLevel);
-			ctx.Read(canUpgradeInt);
-			bool canBeUpgraded = false;
-			if (canUpgradeInt != 0) canBeUpgraded = true;
-			else canBeUpgraded = false;
-			m_TerjePerkStatus.Insert(perkId, new TerjePerkSync(perkLevel, perkActiveLevel, canBeUpgraded));
+			string uam_PerkId;
+			int uam_PerkLevel;
+			int uam_PerkActiveLevel;
+			int uam_CanUpgrade;
+			if (!ctx.Read(uam_PerkId) || !ctx.Read(uam_PerkLevel) || !ctx.Read(uam_PerkActiveLevel) || !ctx.Read(uam_CanUpgrade))
+				return false;
+			m_TerjePerkStatus.Insert(uam_PerkId, new TerjePerkSync(uam_PerkLevel, uam_PerkActiveLevel, uam_CanUpgrade != 0));
 		}
+		return true;
 	}
 	
 	float GetTerjeStat(string id)
