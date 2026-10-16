@@ -67,7 +67,11 @@ modded class JMPlayerForm
 		const int MAX_PERKS_PER_ROW = 11;
 		const string TERJE_GRID_LAYOUT = "TerjeCompatibilityCOT/GUI/Layouts/GridSpacer11.layout";
 
+<<<<<<< Updated upstream
 		m_TerjePerksPanel = UIActionManager.CreateGridSpacer(uam_ParentPanel, 20, 1);
+=======
+		m_TerjePerksPanel = g_Game.GetWorkspace().CreateWidgets("TerjeCompatibilityCOT/GUI/Layouts/SkillsList.layout", uam_ParentPanel);
+>>>>>>> Stashed changes
 		if (!m_TerjePerksPanel)
 			return;
 
@@ -219,6 +223,11 @@ modded class JMPlayerForm
 				player = PlayerBase.Cast(m_SelectedInstance.PlayerObject);
 
 			if (!player)
+<<<<<<< Updated upstream
+=======
+				player = PlayerBase.Cast(g_Game.GetPlayer());
+			if (!player)
+>>>>>>> Stashed changes
 				return;
 				
 			if (button == MouseState.LEFT)

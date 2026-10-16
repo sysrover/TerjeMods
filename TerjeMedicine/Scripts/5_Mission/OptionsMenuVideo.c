@@ -1,3 +1,5 @@
+#ifndef PLATFORM_PS4
+#ifndef PLATFORM_XBOX
 modded class OptionsMenuVideo
 {
 	override void OnPPQualityChanged( int value )
@@ -11,3 +13,5 @@ modded class OptionsMenuVideo
 		super.OnPPQualityChanged(value);
 	}
 }
+#endif
+#endif
